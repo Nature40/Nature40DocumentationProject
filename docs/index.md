@@ -47,7 +47,7 @@ panel1:
 
 
 # Intended goals
-This documentation yields to be an reference for all public Natur40 documentation issues
+This documentation yields to be an reference for all public Natur40 documentations issues
 
 * to clarify what sensor is retrieving what data for what purpose
 * to document the position and IDs of the sensors 
