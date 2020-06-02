@@ -1,0 +1,23 @@
+# main links
+main:
+  - title: "Documentation Units"
+    url: /units.html
+  - title: "About"
+    url: /about.html
+  - title: "Documentation Home"
+    url: /index.html
+  - title: "Natur 4.0 home"
+    url: https://uni-marburg.de/natur40
+  - title: "Sitemap"
+    url: /sitemap.html
+    
+    
+docs:
+  - title: Ways out
+    children:
+      - title: "Documentation Units"
+        url: /units.html
+      - title: "Documentation Home"
+        url: /index.html
+      - title: "NAtur 4.0 Home"
+        url: https://uni-marburg.de/natur40

@@ -1,0 +1,20 @@
+---
+title: Nature 4.0 Third-Party Devices - Overview
+toc: true
+toc_label: Content
+header:
+  image: /assets/images/03-splash.jpg
+  image_description: "Marburg University Forest - Central Area"
+  caption: "3D Pointcloud: M. Ludwig / CC0"
+---
+
+
+
+You will find information about the deployment structure of our sensors  
+
+* [TreeTalker +](treetalker-deployment): Maps and basic data of the treetalker
+
+* [Sensorboxes](sensorbox-deployment): Maps and basic data of the sensorboxes
+
+* [Climate Stations](climate-deployment): Maps and basic data of the additional climate stations
+
