@@ -19,7 +19,7 @@
 ##### URL #####################################################################
 
 # Serve on GitHub
-url: https://natur40.github.io/
+url: https://nature40.github.io/
 baseurl: "/Nature40DocumentationProject/"
 
 ##### Title ###################################################################
@@ -49,7 +49,7 @@ author:
   flickr           : "https://www.flickr.com/environmentalinformatics-marburg/"
   facebook         : "https://www.facebook.com/GeographieMarburg/"
   foursquare       :
-  github           : "natur40"
+  github           : "nature40"
   gitlab           :
   google_plus      :
   keybase          :

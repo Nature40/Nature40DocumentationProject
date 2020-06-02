@@ -7,7 +7,7 @@ main:
   - title: "Documentation Home"
     url: /index.html
   - title: "Natur 4.0 home"
-    url: https://uni-marburg.de/natur40
+    url: https://uni-marburg.de/nature40/
   - title: "Sitemap"
     url: /sitemap.html
     
@@ -20,4 +20,4 @@ docs:
       - title: "Documentation Home"
         url: /index.html
       - title: "NAtur 4.0 Home"
-        url: https://uni-marburg.de/natur40
+        url: https://uni-marburg.de/nature40
