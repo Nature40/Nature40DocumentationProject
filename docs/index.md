@@ -7,7 +7,7 @@ header:
   overlay_filter: 0.6
   overlay_image: "/assets/images/sensor_deployment_title.jpg"
   caption: 'Photo credit: [**Natur 40**](https://www.uni-marburg.de/natur40)'
-  cta_label: Go to Sensors
+  cta_label: go to info units
   cta_url: "/units.html"
 
 excerpt: Information hub of all publicly relevant nature40 concerns
