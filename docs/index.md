@@ -16,7 +16,7 @@ feature_row_intro:
 - excerpt: Documentation Unit of  [LOEWE Nature4.0 documentation project](https://https://nature40.github.io/) at Marburg University
 
 feature_row_ilos:
-- image_path: "/assets/images/envobs_ilos.jpg"
+- image_path: "/assets/images/icon.jpg"
   alt: Cutout of deployment Map.
   title: Overview
   excerpt: "Template..."
