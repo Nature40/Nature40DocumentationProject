@@ -12,7 +12,7 @@ header:
 
 You will find information about the deployment structure of our sensors.<!--more-->  
 
-* [TreeTalker +](01-treetalker-deployment): Maps and basic data of the treetalker
+* [TreeTalker +](02-treetalker-deployment): Maps and basic data of the treetalker
 
 * [Sensorboxes](03-sensorbox-deployment): Maps and basic data of the sensorboxes
 
