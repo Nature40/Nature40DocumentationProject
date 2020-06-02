@@ -1,5 +1,5 @@
 ---
-title: Natur 4.0 Documentation Project
+title: Nature 4.0 Documentation Project
 layout: splash
 date: '2018-02-06 13:00:00 +0100'
 header:
@@ -49,7 +49,7 @@ panel1:
 # Intended goals
 This documentation yields to be an reference for all public Natur40 documentation issues
 
-* to clarify what sensor is retrieving what dat for what purpose
+* to clarify what sensor is retrieving what data for what purpose
 * to document the position and IDs of the sensors 
 * to communicate sensor and data workflow
 
@@ -57,7 +57,7 @@ This documentation yields to be an reference for all public Natur40 documentatio
 
 # Nature 4.0 - Sensing Biodiversity
 
-The LOEWE project Natur 4.0 sets as its aim to enable efficient monitoring of environmental processes through the means of connected sensor networks in order to draw benefits for nature and species conservations and the sustainable use of ecosystem services. Innovative data acquisition and processing techniques need to be developed for a spatial and temporal comprehensive monitoring of our landscapes and ecosystems. The basic tool-kit on the side of data acquisition consists of a spatially-dispersed network of environmental sensors, unmanned aerial vehicles (UAV), automatic rovers as well as low-invasive sensors placed on animals and humans moving through the landscape to be monitored. A very central role comes to the so-called SensorBoxes, which allow for a comprehensive, local-scale and continuous measurement of important environmental variables. 
+The LOEWE project Nature 4.0 sets as its aim to enable efficient monitoring of environmental processes through the means of connected sensor networks in order to draw benefits for nature and species conservation and the sustainable use of ecosystem services. Innovative data acquisition and processing techniques need to be developed for a spatial and temporal comprehensive monitoring of our landscapes and ecosystems. The basic tool-kit on the side of data acquisition consists of a spatially-dispersed network of environmental sensors, unmanned aerial vehicles (UAV), automatic rovers as well as low-invasive sensors placed on animals and humans moving through the landscape to be monitored. A very central role comes to the so-called SensorBoxes, which allow for a comprehensive, local-scale and continuous measurement of important environmental variables. 
 
 # Consortium
 
