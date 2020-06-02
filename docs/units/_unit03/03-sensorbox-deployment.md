@@ -17,5 +17,3 @@ More data is available by clicking on the location.
 {% include media url="/assets/misc/sensorboxes5_deployment_ele.html" %}
 [Full-screen version of the map]({{ site.baseurl }}/assets/misc/sensorboxes5_deployment_ele.html){:target="_blank"}
 
-
-50 28 51 54 2
