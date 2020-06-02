@@ -4,13 +4,13 @@ toc: true
 toc_label: Content
 header:
   image: /assets/images/02-splash.jpg
-  image_description: "Thhird party sensors"
+  image_description: "Third party sensors"
   caption: "Images Natur4.0 / CC0"
 ---
 
 
 
-These pages you will find information about the third-party sensors in use. For a description of the sensors and how they work, please refer to the manufacturer's pages.  <!--more-->
+You will find information about the third-party sensors in use. For a description of the sensors and how they work, please refer to the manufacturer's pages.  <!--more-->
 
 
 In the current state, the sensor system consists of the following third-party sensor systems:
