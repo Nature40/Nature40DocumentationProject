@@ -10,7 +10,7 @@ header:
 
 ## Location and basic data
 
-The current Installation situation of the seonsorbox liftsystems is deleayed due to the production of Version 2.0. However we will start over next weeks with the following 5 lift systems in the core areaas shown on the map below. The colores show the elvation.
+The deployment of the Nature40 homebrew sensorbox liftsystems is deleayed due to the production of sensorbox v2.0. However we will start over next weeks with the following 5 lift systems in the core areaas shown on the map below. The colors show the altitude.
 
 More data is available by clicking on the location.
 

@@ -12,7 +12,8 @@ header:
 
 ## Location and basic data
 
-The current Installation situation of [TreeTalker +](https://www.nature4.org/technology) is shown on the map below. The colors shows the difference of the sap flow sensor distance deviating from the default value of 2.5 cm.
+The current deploayment situation of the [TreeTalker +](https://www.nature4.org/technology) multi-sensor is shown on the map below. The colors shows the difference of the sap flow sensor distance deviating from the default value of 2.5 cm. Currently we are running in an experimental calibration mode. 
+
 More data is available by clicking on the location.
 
 {% include media url="/assets/misc/tt_deployment_sensdiff.html" %}
