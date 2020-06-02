@@ -12,9 +12,9 @@ header:
 
 ## Location and basic data
 
-The status of the operational radio tracking  system is fine. It is running operationally since 1st of March. 
+The status of the operational radio tracking  system is fine. It is running operationally since 1st of March 2020. 
 
 More data is available by clicking on the location.
 
-{% include media url="/assets/misc/rts_deployment_sensdiff.html" %}
-[Full-screen version of the map]({{ site.baseurl }}/assets/misc/rts_deployment_sensdiff.html){:target="_blank"}
+{% include media url="/assets/misc/rts2020_deployment_orientation.html" %}
+[Full-screen version of the map]({{ site.baseurl }}/assets/misc/rts2020_deployment_orientation.html){:target="_blank"}
