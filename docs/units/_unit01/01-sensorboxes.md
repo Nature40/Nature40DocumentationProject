@@ -10,7 +10,7 @@ header:
 
 
 
-On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases. 
+On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases. <!--more-->
 
 This page documents the [hardware construction](hardware), [software aspects](software) as well as the [actual deployment](liftengine#deployment-of-the-base-station) of a station.
 

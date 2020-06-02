@@ -10,7 +10,7 @@ header:
 
 
 
-These pages you will find information about the third-party sensors in use. For a description of the sensors and how they work, please refer to the manufacturer's pages.  
+These pages you will find information about the third-party sensors in use. For a description of the sensors and how they work, please refer to the manufacturer's pages.  <!--more-->
 
 
 In the current state, the sensor system consists of the following third-party sensor systems:

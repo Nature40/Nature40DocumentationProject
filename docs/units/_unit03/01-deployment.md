@@ -10,7 +10,7 @@ header:
 
 
 
-You will find information about the deployment structure of our sensors  
+You will find information about the deployment structure of our sensors.<!--more-->  
 
 * [TreeTalker +](treetalker-deployment): Maps and basic data of the treetalker
 
