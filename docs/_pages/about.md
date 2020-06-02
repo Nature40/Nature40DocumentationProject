@@ -6,7 +6,7 @@ permalink: /about.html
 This documentation is brought to you as part of the [LOEWE Nature4.0 project ](https://www.uni-marburg.de/natur40) project of [Marburg University](https://www.uni-marburg.de/de),[Giessen University, ](https://www.uni-giessen.de/index.html),[Darmstadt University](https://www.tu-darmstadt.de/) and [Senckenberg](https://www.senckenberg.de/de/institute/sbik-f/) founded by [LOEWE](https://wissenschaft.hessen.de/wissenschaft/landesprogramm-loewe) 
 
 
-The content of this documentation is developed and hosted on Github. Thus you find the cutting edge development version is on [Natur40 Sensor-Deployment](https://https://nature40.github.io/sensor-deployment/)
+The content of this documentation is developed and hosted on Github. Thus you find the cutting edge development version is on [Natur40 Documentation Project](https://https://nature40.github.io/sensor-deployment/)
 
 This content is brought to you as part of the [LOEWE Nature4.0 documentation project](https://https://nature40.github.io/).
 
