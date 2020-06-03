@@ -1,57 +1,41 @@
 ---
-title: Nature 4.0 Sensorboxes - Overview
+title: Nature 4.0 Sensor Boxes
 toc: true
 toc_label: Content
 header:
   image: /assets/images/01-splash.jpg
-  image_description: "Image Panel Natur 4.0 Sensorboxes"
+  image_description: "Image panel Natur 4.0 sensor boxes"
   caption: "Images Natur4.0 / CC0"
 ---
 
 
 
-On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases. <!--more-->
-
-This page documents the [hardware construction](hardware), [software aspects](software) as well as the [actual deployment](liftengine#deployment-of-the-base-station) of a station.
-
-We follow a classification defined in the project:
-
-The sensorboxes system is based upon homogeneous hardware components. This helps to get experienced with the components, and allows to get faster in construction.
-
-In the current state, the sensor system consists of the following integrated boxes:
-
+Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.
+<!--more-->
+This section documents the hardware, software and deployment of our stations. Stations are named as follows:
 * [Power Supply](power_supply): containment, solar charger, connectors
-* [Planet](planet): Static unit with networking and storage capabilities 
+* [Planet](planet): Static unit with networking and storage capabilities
 * [Moon](moon): Vertically moving unit
 * [Lift Engine](liftengine): Wooden box holding a motor
 * [Lift Controller](liftcontroller): Helper unit, controlling the motor
 
+## Planets and Moons
 
-### Planets & Moons
+We refer to *planets* and *moons* for sensor boxes with higher processing capabilities fulfilling infrastructural tasks. A planet explicitly has the task to collect data over longer time periods, while a moon can process data, but has to offload its data quite frequently.
 
-We refer to Planets and Moons for sensorboxes with higher processing capabilities, which, e.g., fulfill infrastructural tasks. A planet explicitly has the task to collect data for longer periods of time, while a moon can process data, but is intendet to offload its data quite frequently. 
+## Satellites and Probes
 
-### Satellites & Probes
+*Satellites* and *probes* are devices fulfilling one specific task. This allows them to take advantages from deep-sleep capabilities of modern devices. While they can work independently by writing their data e.g. onto an SD card, they are built to make use of the communication and storage infrastructure offered by our planets and moons. A satellite is bound to a planet or moon, while a probe works independently from one.
 
-Satellites and Probes are devices fulfilling one specific task, which allows them to have advantages by using deep-sleep capabilities of modern devices. While they can work independently by writing their data e.g. onto an SD card, they are built to make use of the infrastucture offered by our planets and moons. A satellite is bound to a Planet or Moon, while a Probe works independently from one.
-
-## A Sensorbox
-
-The figure below shows a Moon Sensorbox, which is able to be moved along a tree, to record microclimate, bird songs and canope images on different heights. 
-
+## Sensorbox
+The figure below shows a moon sensorbox, which is able to vertically move up along a tree in order to record microclimate, bird songs and canopy images at different heights.
 {% include figure image_path="/assets/images/insideBox.jpg" alt="Example Moon Sensorbox" %}
-
-The Sensorbox contains a Raspberry Pi Single-Board-Computer which records the connected sensors consisting of a camera, a microphone, temperature & humidity and a lux sensor. It is powered by a generic powerbank, which itself is charged through a QI charging pad, when at the boottom of the station.
+The sensorbox contains a Raspberry Pi single-board-computer which records the connected sensors consisting of a camera, a microphone, temperature & humidity and a lux sensor. It is powered by a generic powerbank, which itself is charged through a QI charging pad, when at the bottom of the station.
 
 ## Software
-
-The Sensorboxes used in this project are based on two different platforms:
-
-1. [Raspberry Pi-based Sensorboxes]({{site.url}}{{site.baseurl}}/pages/Software/PiBased/) for date-intensive applications, such as photos or videos, and
+The sensor boxes used in this project are based on two different platforms:
+1. [Raspberry Pi-based Sensorboxes]({{site.url}}{{site.baseurl}}/pages/Software/PiBased/) for date-intensive applications, such as photos or videos.
 2. Arduino-based boxes for easier tasks and sensors, such as temperature or humidity.
 
-## Open Source
-
-Our project works with Commodity-Off-the-Shelf (COTS) hardware for whereever possible, however there are some custom made and 3D-printed parts, which are [available at GitHub](https://github.com/Nature40/Sensorboxes-Design).
-
-[Pysensorproxy](https://github.com/Nature40/pysensorproxy), used to record sensor meterings, as well as [Pimod](https://github.com/Nature40/pimod), implemented to create and configure Raspberry Pi images, is available Open Source and under a permissive license on GitHub. 
+## Additional sources
+Our project works with Commodity-Off-the-Shelf (COTS) hardware wherever possible. Custom made and 3D-printed parts are described in the [Sensorboxes-Design repository] (https://github.com/Nature40/Sensorboxes-Design). Software for recording sensor data is available through the [Pysensorproxy repository](https://github.com/Nature40/pysensorproxy) and Raspberry Pi images can be configured with helpers from the [Pimod repository](https://github.com/Nature40/pimod).

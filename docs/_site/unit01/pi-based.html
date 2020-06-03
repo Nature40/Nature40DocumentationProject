@@ -1,0 +1,601 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Raspberry Pi-based Sensorboxes | LOEWE Natur4.0 Documentation Project</title>
+<meta name="description" content="The heart of these Sensorboxes is pysensorproxy used to schedule, execute and transmit environmental measurements.  For the Raspberry Pi (RPi) based Sensorboxes the default Raspbian Operating System is used.  Our software, as well as other features, such as mesh networking, remote access via ssh or hardware used in the boxes require further installation of software and configuration. In the first stage common configuration files and custom software are installed using pimod, which allows to reconfigure Raspberry Pi images with an easy, Docker-like configuration file.  In the second stage an image is flashed to an SD card and then provisioned for as specific Sensorbox using a templating engine.    pysensorproxy  Pysensorproxy is a python tool used to schedule, execute and transmit environmental measurements.  It is currently targeted to be used with a Raspberry Pi, but will be extended for other sensors an platforms in the future. Pysensorproxy is modularized by supporting various sensors configurable in a yml file.  storage_path: /data               # path to save files  sensors:                          # list of sensors   am2302:                           # name (choose freely)     type: AM2302                      # type (must be in sensorproxy.sensors.*)     pin: 4                            # additional configuration parameter   cam:     type: PiCamera     img_format: jpeg   The meterings are done according to a configurable schedule.  daytime:              # name of the measuring cycle   sensors:              # dict of the sensors to be measured     cam:                  # reference to `cam`, configured in the static config (yml)       res_X: 3280           # image resolution, set according to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md       res_Y: 2464       adjust_time: 2s       # time to adjust to brightness   schedule:               # schedule parametes     interval: 30m           # measurement is mandatory (max. 24h)     start: 06h              # optional, according to local time     end: 22h                # optional, according to local time   Stage 1: Image Creation  The goal of the image creation stage is to reproducibly build images for Sensorboxes. To reach this goal, common configuration files, as well as Pifiles (used by pimod) to install custom software are defined in Sensorboxes-Images. The defined images can be build locally, as described in the Readme, or are build and uploaded to GitHub releases using Travis-CI when git tags are pushed to the GitHub repo.  The image creation itself happens in different layers, which has the advantage of faster build times.  1. Base  In the base image, common software and configurations for all Sensorbox types are installed:    Default password (natur) is set   serial interfaces is enabled   ssh is configured and enabled   timezone is set to Europe/Berlin   installation: wireguard, uhubctl   automated hostname configuration is added   RTL8822BU drivers   2. Mesh  Software and configuration for a B.A.T.M.A.N-based mesh, featuring IPv4 auto-configuration using the Raspberry PI serial number.  3. Sensorbox  This layer targets the hardware and software configuration of the actual Sensorboxes (planets and moons), as described in SensorModules. Currently it consists of:    Enabling hardware: RPi camera, I2C bus, DS3231 real-time clock   installation: hostapd, dnsmasq, pysensorproxy   Stage 2: Sensorbox provisioning  All common software and configuration for the Sensorboxes is done in stage 1. As some configuration aspects of the Sensorboxes differ from appliance to appliance, these need to be configured per Sensorbox.  Also some configuration aspects might need to be private, as passwords.  Sensorboxes-Config holds Sensorbox-specific configurations, as well as private information, and thus is not publicly available.  generate_config.py  Simple, yet powerful jinja2-based templating for configuration files.  It takes one generic input file and a yml file, containing variables in key-value format.  _deployments The folder contains a yml for each individual Sensorbox installation.  The variables defined in the yml are used in the templating engine  deployment: mof_cst_00008 planet: nature40-sensorbox-9a3fcc8c moon: nature40-sensorbox- liftsystem: nature40-liftsystem- height: 0 gps: [0.0, 0.0] tel: &quot;&quot;   Configuration folders, e.g.default/planet  All the files inside a configuration folders are processed using generate_config.py and copied into the boot partion of the flashed image.   id: {{ deployment }}_planet storage_path: /data    In this example {{ deployment }} will be replaced by the value defined in the deployment file, respectively.  Usage  flash.sh: Flash an image to a device usage: ./flash.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt;   configure.sh: Write configuration filled accordingly to a deployment. usage: ./configure.sh &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   provision.sh: Provision (flash and configure) an SD card. usage: ./provision.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   remote.sh: Write configuration filled accordingly to a deployment via ssh. usage: ./remote.sh &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt; &lt;SSH_HOST&gt;   wireguard.sh: Print wireguard configuration and append to ssh/wireguard config. usage: ./wireguard.sh &lt;DEPLOYMENT&gt;   wireguard-full.sh: Recreate wireguard configuration for all deployments usage: ./wireguard-full.sh   ">
+
+
+  <meta name="author" content="Christoph Reudenbach">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="LOEWE Natur4.0 Documentation Project">
+<meta property="og:title" content="Raspberry Pi-based Sensorboxes">
+<meta property="og:url" content="http://localhost:4000/Nature40DocumentationProject/unit01/pi-based.html">
+
+
+  <meta property="og:description" content="The heart of these Sensorboxes is pysensorproxy used to schedule, execute and transmit environmental measurements.  For the Raspberry Pi (RPi) based Sensorboxes the default Raspbian Operating System is used.  Our software, as well as other features, such as mesh networking, remote access via ssh or hardware used in the boxes require further installation of software and configuration. In the first stage common configuration files and custom software are installed using pimod, which allows to reconfigure Raspberry Pi images with an easy, Docker-like configuration file.  In the second stage an image is flashed to an SD card and then provisioned for as specific Sensorbox using a templating engine.    pysensorproxy  Pysensorproxy is a python tool used to schedule, execute and transmit environmental measurements.  It is currently targeted to be used with a Raspberry Pi, but will be extended for other sensors an platforms in the future. Pysensorproxy is modularized by supporting various sensors configurable in a yml file.  storage_path: /data               # path to save files  sensors:                          # list of sensors   am2302:                           # name (choose freely)     type: AM2302                      # type (must be in sensorproxy.sensors.*)     pin: 4                            # additional configuration parameter   cam:     type: PiCamera     img_format: jpeg   The meterings are done according to a configurable schedule.  daytime:              # name of the measuring cycle   sensors:              # dict of the sensors to be measured     cam:                  # reference to `cam`, configured in the static config (yml)       res_X: 3280           # image resolution, set according to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md       res_Y: 2464       adjust_time: 2s       # time to adjust to brightness   schedule:               # schedule parametes     interval: 30m           # measurement is mandatory (max. 24h)     start: 06h              # optional, according to local time     end: 22h                # optional, according to local time   Stage 1: Image Creation  The goal of the image creation stage is to reproducibly build images for Sensorboxes. To reach this goal, common configuration files, as well as Pifiles (used by pimod) to install custom software are defined in Sensorboxes-Images. The defined images can be build locally, as described in the Readme, or are build and uploaded to GitHub releases using Travis-CI when git tags are pushed to the GitHub repo.  The image creation itself happens in different layers, which has the advantage of faster build times.  1. Base  In the base image, common software and configurations for all Sensorbox types are installed:    Default password (natur) is set   serial interfaces is enabled   ssh is configured and enabled   timezone is set to Europe/Berlin   installation: wireguard, uhubctl   automated hostname configuration is added   RTL8822BU drivers   2. Mesh  Software and configuration for a B.A.T.M.A.N-based mesh, featuring IPv4 auto-configuration using the Raspberry PI serial number.  3. Sensorbox  This layer targets the hardware and software configuration of the actual Sensorboxes (planets and moons), as described in SensorModules. Currently it consists of:    Enabling hardware: RPi camera, I2C bus, DS3231 real-time clock   installation: hostapd, dnsmasq, pysensorproxy   Stage 2: Sensorbox provisioning  All common software and configuration for the Sensorboxes is done in stage 1. As some configuration aspects of the Sensorboxes differ from appliance to appliance, these need to be configured per Sensorbox.  Also some configuration aspects might need to be private, as passwords.  Sensorboxes-Config holds Sensorbox-specific configurations, as well as private information, and thus is not publicly available.  generate_config.py  Simple, yet powerful jinja2-based templating for configuration files.  It takes one generic input file and a yml file, containing variables in key-value format.  _deployments The folder contains a yml for each individual Sensorbox installation.  The variables defined in the yml are used in the templating engine  deployment: mof_cst_00008 planet: nature40-sensorbox-9a3fcc8c moon: nature40-sensorbox- liftsystem: nature40-liftsystem- height: 0 gps: [0.0, 0.0] tel: &quot;&quot;   Configuration folders, e.g.default/planet  All the files inside a configuration folders are processed using generate_config.py and copied into the boot partion of the flashed image.   id: {{ deployment }}_planet storage_path: /data    In this example {{ deployment }} will be replaced by the value defined in the deployment file, respectively.  Usage  flash.sh: Flash an image to a device usage: ./flash.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt;   configure.sh: Write configuration filled accordingly to a deployment. usage: ./configure.sh &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   provision.sh: Provision (flash and configure) an SD card. usage: ./provision.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   remote.sh: Write configuration filled accordingly to a deployment via ssh. usage: ./remote.sh &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt; &lt;SSH_HOST&gt;   wireguard.sh: Print wireguard configuration and append to ssh/wireguard config. usage: ./wireguard.sh &lt;DEPLOYMENT&gt;   wireguard-full.sh: Recreate wireguard configuration for all deployments usage: ./wireguard-full.sh   ">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/Nature40DocumentationProject/assets/images/01-splash.jpg">
+
+
+
+  <meta name="twitter:site" content="@SensingBiodiv">
+  <meta name="twitter:title" content="Raspberry Pi-based Sensorboxes">
+  <meta name="twitter:description" content="The heart of these Sensorboxes is pysensorproxy used to schedule, execute and transmit environmental measurements.  For the Raspberry Pi (RPi) based Sensorboxes the default Raspbian Operating System is used.  Our software, as well as other features, such as mesh networking, remote access via ssh or hardware used in the boxes require further installation of software and configuration. In the first stage common configuration files and custom software are installed using pimod, which allows to reconfigure Raspberry Pi images with an easy, Docker-like configuration file.  In the second stage an image is flashed to an SD card and then provisioned for as specific Sensorbox using a templating engine.    pysensorproxy  Pysensorproxy is a python tool used to schedule, execute and transmit environmental measurements.  It is currently targeted to be used with a Raspberry Pi, but will be extended for other sensors an platforms in the future. Pysensorproxy is modularized by supporting various sensors configurable in a yml file.  storage_path: /data               # path to save files  sensors:                          # list of sensors   am2302:                           # name (choose freely)     type: AM2302                      # type (must be in sensorproxy.sensors.*)     pin: 4                            # additional configuration parameter   cam:     type: PiCamera     img_format: jpeg   The meterings are done according to a configurable schedule.  daytime:              # name of the measuring cycle   sensors:              # dict of the sensors to be measured     cam:                  # reference to `cam`, configured in the static config (yml)       res_X: 3280           # image resolution, set according to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md       res_Y: 2464       adjust_time: 2s       # time to adjust to brightness   schedule:               # schedule parametes     interval: 30m           # measurement is mandatory (max. 24h)     start: 06h              # optional, according to local time     end: 22h                # optional, according to local time   Stage 1: Image Creation  The goal of the image creation stage is to reproducibly build images for Sensorboxes. To reach this goal, common configuration files, as well as Pifiles (used by pimod) to install custom software are defined in Sensorboxes-Images. The defined images can be build locally, as described in the Readme, or are build and uploaded to GitHub releases using Travis-CI when git tags are pushed to the GitHub repo.  The image creation itself happens in different layers, which has the advantage of faster build times.  1. Base  In the base image, common software and configurations for all Sensorbox types are installed:    Default password (natur) is set   serial interfaces is enabled   ssh is configured and enabled   timezone is set to Europe/Berlin   installation: wireguard, uhubctl   automated hostname configuration is added   RTL8822BU drivers   2. Mesh  Software and configuration for a B.A.T.M.A.N-based mesh, featuring IPv4 auto-configuration using the Raspberry PI serial number.  3. Sensorbox  This layer targets the hardware and software configuration of the actual Sensorboxes (planets and moons), as described in SensorModules. Currently it consists of:    Enabling hardware: RPi camera, I2C bus, DS3231 real-time clock   installation: hostapd, dnsmasq, pysensorproxy   Stage 2: Sensorbox provisioning  All common software and configuration for the Sensorboxes is done in stage 1. As some configuration aspects of the Sensorboxes differ from appliance to appliance, these need to be configured per Sensorbox.  Also some configuration aspects might need to be private, as passwords.  Sensorboxes-Config holds Sensorbox-specific configurations, as well as private information, and thus is not publicly available.  generate_config.py  Simple, yet powerful jinja2-based templating for configuration files.  It takes one generic input file and a yml file, containing variables in key-value format.  _deployments The folder contains a yml for each individual Sensorbox installation.  The variables defined in the yml are used in the templating engine  deployment: mof_cst_00008 planet: nature40-sensorbox-9a3fcc8c moon: nature40-sensorbox- liftsystem: nature40-liftsystem- height: 0 gps: [0.0, 0.0] tel: &quot;&quot;   Configuration folders, e.g.default/planet  All the files inside a configuration folders are processed using generate_config.py and copied into the boot partion of the flashed image.   id: {{ deployment }}_planet storage_path: /data    In this example {{ deployment }} will be replaced by the value defined in the deployment file, respectively.  Usage  flash.sh: Flash an image to a device usage: ./flash.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt;   configure.sh: Write configuration filled accordingly to a deployment. usage: ./configure.sh &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   provision.sh: Provision (flash and configure) an SD card. usage: ./provision.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;   remote.sh: Write configuration filled accordingly to a deployment via ssh. usage: ./remote.sh &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt; &lt;SSH_HOST&gt;   wireguard.sh: Print wireguard configuration and append to ssh/wireguard config. usage: ./wireguard.sh &lt;DEPLOYMENT&gt;   wireguard-full.sh: Recreate wireguard configuration for all deployments usage: ./wireguard-full.sh   ">
+  <meta name="twitter:url" content="http://localhost:4000/Nature40DocumentationProject/unit01/pi-based.html">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/Nature40DocumentationProject/assets/images/01-splash.jpg">
+  
+
+  
+    <meta name="twitter:creator" content="@https://twitter.com/SensingBiodiv">
+  
+
+
+
+  <meta property="article:published_time" content="2020-06-03T08:10:26+02:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/Nature40DocumentationProject/unit01/pi-based.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Natur 4.0",
+      "url": "http://localhost:4000/Nature40DocumentationProject/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/Nature40DocumentationProject/feed.xml" type="application/atom+xml" rel="alternate" title="LOEWE Natur4.0 Documentation Project Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/Nature40DocumentationProject/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+    	<a class="site-title" href="http://localhost:4000/Nature40DocumentationProject/" style="padding:0px"><img src="http://localhost:4000/Nature40DocumentationProject/assets/images/logo_umr.png" style="padding-right:15px">LOEWE Natur4.0 Documentation Project</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/Nature40DocumentationProject//units.html" >Documentation Units</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/Nature40DocumentationProject//about.html" >About</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/Nature40DocumentationProject//index.html" >Documentation Home</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="https://uni-marburg.de/nature40/" >Natur 4.0 home</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/Nature40DocumentationProject//sitemap.html" >Sitemap</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" background-image: url('');"
+>
+  
+    <img src="/Nature40DocumentationProject/assets/images/01-splash.jpg" alt="Image Panel Natur 4.0 Sensorboxes" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">Images Natur4.0 / CC0
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+  <div class="sidebar sticky">
+  
+
+  
+    
+      
+      
+      
+    
+    
+	  
+        <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+        
+        <li>
+          <span class="nav__sub-title">
+		     <a href="/Nature40DocumentationProject//unit01/01-sensorboxes.html" class="">Sensor Boxes</a>
+		  </span>
+          <ul>
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/01-sensorboxes.html" class="">Nature 4.0 Sensor Boxes</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/liftcontroller.html" class="">Lift Controller</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/liftengine.html" class="">Lift Engine</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/moon.html" class="">Vertically moving Sensorbox - Moon</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/planet.html" class="">Static Sensorbox - Planet</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/power_supply.html" class="">Power Supply</a></li>
+			  
+            
+              
+			  
+			    <li><a href="/Nature40DocumentationProject//unit01/pi-based.html" class="active">Raspberry Pi-based Sensorboxes</a></li>
+			  
+            
+          </ul>
+        </li>
+	  
+    
+      
+      
+        
+        <li>
+          <span class="nav__sub-title">
+		     <a href="/Nature40DocumentationProject//unit02/01-third-party-devices.html" class="">Third-Party Sensors</a>
+		  </span>
+          <ul>
+            
+              
+			  
+            
+          </ul>
+        </li>
+	  
+    
+      
+      
+        
+        <li>
+          <span class="nav__sub-title">
+		     <a href="/Nature40DocumentationProject//unit03/01-deployment.html" class="">Sensor Deployment</a>
+		  </span>
+          <ul>
+            
+              
+			  
+            
+              
+			  
+            
+              
+			  
+            
+              
+			  
+            
+              
+			  
+            
+          </ul>
+        </li>
+	  
+    
+      
+      
+    
+      
+      
+    
+  </ul>
+</nav>
+	  
+    
+  
+  </div>
+  
+
+
+
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Raspberry Pi-based Sensorboxes">
+    <meta itemprop="description" content="The heart of these Sensorboxes is pysensorproxy used to schedule, execute and transmit environmental measurements. For the Raspberry Pi (RPi) based Sensorboxes the default Raspbian Operating System is used. Our software, as well as other features, such as mesh networking, remote access via ssh or hardware used in the boxes require further installation of software and configuration.In the first stage common configuration files and custom software are installed using pimod, which allows to reconfigure Raspberry Pi images with an easy, Docker-like configuration file. In the second stage an image is flashed to an SD card and then provisioned for as specific Sensorbox using a templating engine.pysensorproxyPysensorproxy is a python tool used to schedule, execute and transmit environmental measurements. It is currently targeted to be used with a Raspberry Pi, but will be extended for other sensors an platforms in the future.Pysensorproxy is modularized by supporting various sensors configurable in a yml file.storage_path: /data               # path to save filessensors:                          # list of sensors  am2302:                           # name (choose freely)    type: AM2302                      # type (must be in sensorproxy.sensors.*)    pin: 4                            # additional configuration parameter  cam:    type: PiCamera    img_format: jpegThe meterings are done according to a configurable schedule.daytime:              # name of the measuring cycle  sensors:              # dict of the sensors to be measured    cam:                  # reference to `cam`, configured in the static config (yml)      res_X: 3280           # image resolution, set according to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md      res_Y: 2464      adjust_time: 2s       # time to adjust to brightness  schedule:               # schedule parametes    interval: 30m           # measurement is mandatory (max. 24h)    start: 06h              # optional, according to local time    end: 22h                # optional, according to local timeStage 1: Image CreationThe goal of the image creation stage is to reproducibly build images for Sensorboxes.To reach this goal, common configuration files, as well as Pifiles (used by pimod) to install custom software are defined in Sensorboxes-Images.The defined images can be build locally, as described in the Readme, or are build and uploaded to GitHub releases using Travis-CI when git tags are pushed to the GitHub repo. The image creation itself happens in different layers, which has the advantage of faster build times.1. BaseIn the base image, common software and configurations for all Sensorbox types are installed:  Default password (natur) is set  serial interfaces is enabled  ssh is configured and enabled  timezone is set to Europe/Berlin  installation: wireguard, uhubctl  automated hostname configuration is added  RTL8822BU drivers2. MeshSoftware and configuration for a B.A.T.M.A.N-based mesh, featuring IPv4 auto-configuration using the Raspberry PI serial number.3. SensorboxThis layer targets the hardware and software configuration of the actual Sensorboxes (planets and moons), as described in SensorModules.Currently it consists of:  Enabling hardware: RPi camera, I2C bus, DS3231 real-time clock  installation: hostapd, dnsmasq, pysensorproxyStage 2: Sensorbox provisioningAll common software and configuration for the Sensorboxes is done in stage 1.As some configuration aspects of the Sensorboxes differ from appliance to appliance, these need to be configured per Sensorbox. Also some configuration aspects might need to be private, as passwords. Sensorboxes-Config holds Sensorbox-specific configurations, as well as private information, and thus is not publicly available.generate_config.pySimple, yet powerful jinja2-based templating for configuration files. It takes one generic input file and a yml file, containing variables in key-value format._deploymentsThe folder contains a yml for each individual Sensorbox installation. The variables defined in the yml are used in the templating enginedeployment: mof_cst_00008planet: nature40-sensorbox-9a3fcc8cmoon: nature40-sensorbox-liftsystem: nature40-liftsystem-height: 0gps: [0.0, 0.0]tel: &quot;&quot;Configuration folders, e.g.default/planetAll the files inside a configuration folders are processed using generate_config.py and copied into the boot partion of the flashed image.id: {{ deployment }}_planetstorage_path: /dataIn this example {{ deployment }} will be replaced by the value defined in the deployment file, respectively.Usageflash.sh: Flash an image to a deviceusage: ./flash.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt;configure.sh: Write configuration filled accordingly to a deployment.usage: ./configure.sh &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;provision.sh: Provision (flash and configure) an SD card.usage: ./provision.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;remote.sh: Write configuration filled accordingly to a deployment via ssh.usage: ./remote.sh &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt; &lt;SSH_HOST&gt;wireguard.sh: Print wireguard configuration and append to ssh/wireguard config.usage: ./wireguard.sh &lt;DEPLOYMENT&gt;wireguard-full.sh: Recreate wireguard configuration for all deploymentsusage: ./wireguard-full.sh">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Raspberry Pi-based Sensorboxes
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#pysensorproxy">pysensorproxy</a></li>
+  <li><a href="#stage-1-image-creation">Stage 1: Image Creation</a>
+     -  <a href="#1-base">1. Base</a>
+     -  <a href="#2-mesh">2. Mesh</a>
+     -  <a href="#3-sensorbox">3. Sensorbox</a></li>
+  <li><a href="#stage-2-sensorbox-provisioning">Stage 2: Sensorbox provisioning</a>
+     -  <a href="#generate_configpy">generate_config.py</a>
+     -  <a href="#_deployments">_deployments</a>
+     -  <a href="#configuration-folders-egdefaultplanet">Configuration folders, e.g.default/planet</a>
+     -  <a href="#usage">Usage</a>
+         -  <a href="#flashsh-flash-an-image-to-a-device">flash.sh: Flash an image to a device</a>
+         -  <a href="#configuresh-write-configuration-filled-accordingly-to-a-deployment">configure.sh: Write configuration filled accordingly to a deployment.</a>
+         -  <a href="#provisionsh-provision-flash-and-configure-an-sd-card">provision.sh: Provision (flash and configure) an SD card.</a>
+         -  <a href="#remotesh-write-configuration-filled-accordingly-to-a-deployment-via-ssh">remote.sh: Write configuration filled accordingly to a deployment via ssh.</a>
+         -  <a href="#wireguardsh-print-wireguard-configuration-and-append-to-sshwireguard-config">wireguard.sh: Print wireguard configuration and append to ssh/wireguard config.</a>
+         -  <a href="#wireguard-fullsh-recreate-wireguard-configuration-for-all-deployments">wireguard-full.sh: Recreate wireguard configuration for all deployments</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <p>The heart of these Sensorboxes is <a href="https://github.com/Nature40/pysensorproxy">pysensorproxy</a> used to schedule, execute and transmit environmental measurements. 
+For the Raspberry Pi (RPi) based Sensorboxes the default <a href="http://www.raspbian.org">Raspbian Operating System</a> is used. 
+Our software, as well as other features, such as mesh networking, remote access via ssh or hardware used in the boxes require further installation of software and configuration.
+In the first stage common configuration files and custom software are installed using <a href="https://github.com/Nature40/pimod/">pimod</a>, which allows to reconfigure Raspberry Pi images with an easy, Docker-like configuration file. 
+In the second stage an image is flashed to an SD card and then provisioned for as specific Sensorbox using a templating engine.</p>
+
+<p><img src="http://localhost:4000/Nature40DocumentationProject//assets/img/software/PiBased-Overview.svg" alt="Overview of Raspberry-Pi Software and Configuration" /></p>
+
+<h2 id="pysensorproxy">pysensorproxy</h2>
+
+<p><a href="https://github.com/Nature40/pysensorproxy">Pysensorproxy</a> is a python tool used to schedule, execute and transmit environmental measurements. 
+It is currently targeted to be used with a Raspberry Pi, but will be extended for other sensors an platforms in the future.
+Pysensorproxy is modularized by supporting various sensors configurable in a yml file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">storage_path</span><span class="pi">:</span> <span class="s">/data</span>               <span class="c1"># path to save files</span>
+
+<span class="na">sensors</span><span class="pi">:</span>                          <span class="c1"># list of sensors</span>
+  <span class="na">am2302</span><span class="pi">:</span>                           <span class="c1"># name (choose freely)</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">AM2302</span>                      <span class="c1"># type (must be in sensorproxy.sensors.*)</span>
+    <span class="na">pin</span><span class="pi">:</span> <span class="m">4</span>                            <span class="c1"># additional configuration parameter</span>
+  <span class="na">cam</span><span class="pi">:</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">PiCamera</span>
+    <span class="na">img_format</span><span class="pi">:</span> <span class="s">jpeg</span>
+</code></pre></div></div>
+
+<p>The meterings are done according to a configurable schedule.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">daytime</span><span class="pi">:</span>              <span class="c1"># name of the measuring cycle</span>
+  <span class="na">sensors</span><span class="pi">:</span>              <span class="c1"># dict of the sensors to be measured</span>
+    <span class="na">cam</span><span class="pi">:</span>                  <span class="c1"># reference to `cam`, configured in the static config (yml)</span>
+      <span class="na">res_X</span><span class="pi">:</span> <span class="m">3280</span>           <span class="c1"># image resolution, set according to https://www.raspberrypi.org/documentation/raspbian/applications/camera.md</span>
+      <span class="na">res_Y</span><span class="pi">:</span> <span class="m">2464</span>
+      <span class="na">adjust_time</span><span class="pi">:</span> <span class="s">2s</span>       <span class="c1"># time to adjust to brightness</span>
+  <span class="na">schedule</span><span class="pi">:</span>               <span class="c1"># schedule parametes</span>
+    <span class="na">interval</span><span class="pi">:</span> <span class="s">30m</span>           <span class="c1"># measurement is mandatory (max. 24h)</span>
+    <span class="na">start</span><span class="pi">:</span> <span class="s">06h</span>              <span class="c1"># optional, according to local time</span>
+    <span class="na">end</span><span class="pi">:</span> <span class="s">22h</span>                <span class="c1"># optional, according to local time</span>
+</code></pre></div></div>
+
+<h2 id="stage-1-image-creation">Stage 1: Image Creation</h2>
+
+<p>The goal of the image creation stage is to reproducibly build images for Sensorboxes.
+To reach this goal, common configuration files, as well as Pifiles (used by <a href="https://github.com/Nature40/pimod/">pimod</a>) to install custom software are defined in <a href="https://github.com/Nature40/Sensorboxes-Images">Sensorboxes-Images</a>.
+The defined images can be build locally, as described in the Readme, or are build and uploaded to GitHub releases using Travis-CI when git tags are pushed to the GitHub repo. 
+The image creation itself happens in different layers, which has the advantage of faster build times.</p>
+
+<h4 id="1-base">1. <a href="https://github.com/Nature40/Sensorboxes-Images/blob/master/Base.Pifile">Base</a></h4>
+
+<p>In the base image, common software and configurations for all Sensorbox types are installed:</p>
+<ul>
+  <li>Default password (natur) is set</li>
+  <li>serial interfaces is enabled</li>
+  <li>ssh is configured and enabled</li>
+  <li>timezone is set to Europe/Berlin</li>
+  <li>installation: wireguard, <a href="https://github.com/mvp/uhubctl">uhubctl</a></li>
+  <li>automated hostname configuration is added</li>
+  <li>RTL8822BU drivers</li>
+</ul>
+
+<h4 id="2-mesh">2. <a href="https://github.com/Nature40/Sensorboxes-Images/blob/master/Mesh.Pifile">Mesh</a></h4>
+
+<p>Software and configuration for a B.A.T.M.A.N-based mesh, featuring IPv4 auto-configuration using the Raspberry PI serial number.</p>
+
+<h4 id="3-sensorbox">3. <a href="https://github.com/Nature40/Sensorboxes-Images/blob/master/Sensorbox.Pifile">Sensorbox</a></h4>
+
+<p>This layer targets the hardware and software configuration of the actual Sensorboxes (planets and moons), as described in <a href="/Sensorboxes-Documentation/pages/SensorModules/SensorModules">SensorModules</a>.
+Currently it consists of:</p>
+<ul>
+  <li>Enabling hardware: RPi camera, I2C bus, DS3231 real-time clock</li>
+  <li>installation: hostapd, dnsmasq, pysensorproxy</li>
+</ul>
+
+<h2 id="stage-2-sensorbox-provisioning">Stage 2: Sensorbox provisioning</h2>
+
+<p>All common software and configuration for the Sensorboxes is done in stage 1.
+As some configuration aspects of the Sensorboxes differ from appliance to appliance, these need to be configured per Sensorbox. 
+Also some configuration aspects might need to be private, as passwords. 
+<a href="https://github.com/Nature40/Sensorboxes-Config">Sensorboxes-Config</a> holds Sensorbox-specific configurations, as well as private information, and thus is not publicly available.</p>
+
+<h4 id="generate_configpy"><a href="https://github.com/Nature40/Sensorboxes-Config/blob/master/generate_config.py">generate_config.py</a></h4>
+
+<p>Simple, yet powerful <a href="">jinja2</a>-based templating for configuration files. 
+It takes one generic input file and a yml file, containing variables in key-value format.</p>
+
+<h4 id="_deployments"><a href="https://github.com/Nature40/Sensorboxes-Config/tree/master/_deployments">_deployments</a></h4>
+<p>The folder contains a yml for each individual Sensorbox installation. 
+The variables defined in the yml are used in the templating engine</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deployment</span><span class="pi">:</span> <span class="s">mof_cst_00008</span>
+<span class="na">planet</span><span class="pi">:</span> <span class="s">nature40-sensorbox-9a3fcc8c</span>
+<span class="na">moon</span><span class="pi">:</span> <span class="s">nature40-sensorbox-</span>
+<span class="na">liftsystem</span><span class="pi">:</span> <span class="s">nature40-liftsystem-</span>
+<span class="na">height</span><span class="pi">:</span> <span class="m">0</span>
+<span class="na">gps</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">0.0</span><span class="pi">,</span> <span class="nv">0.0</span><span class="pi">]</span>
+<span class="na">tel</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+</code></pre></div></div>
+
+<h4 id="configuration-folders-egdefaultplanet">Configuration folders, e.g.<a href="https://github.com/Nature40/Sensorboxes-Config/tree/master/default/planet">default/planet</a></h4>
+
+<p>All the files inside a configuration folders are processed using <a href="https://github.com/Nature40/Sensorboxes-Config/blob/master/generate_config.py">generate_config.py</a> and copied into the boot partion of the flashed image.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="na">id</span><span class="pi">:</span> <span class="pi">{{</span> <span class="nv">deployment</span> <span class="pi">}}</span><span class="s">_planet</span>
+<span class="na">storage_path</span><span class="pi">:</span> <span class="s">/data</span>
+
+</code></pre></div></div>
+
+<p>In this example <code class="language-plaintext highlighter-rouge">{{ deployment }}</code> will be replaced by the value defined in the deployment file, respectively.</p>
+
+<h4 id="usage">Usage</h4>
+
+<h5 id="flashsh-flash-an-image-to-a-device"><code class="language-plaintext highlighter-rouge">flash.sh</code>: Flash an image to a device</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./flash.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt;
+</code></pre></div></div>
+
+<h5 id="configuresh-write-configuration-filled-accordingly-to-a-deployment"><code class="language-plaintext highlighter-rouge">configure.sh</code>: Write configuration filled accordingly to a deployment.</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./configure.sh &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;
+</code></pre></div></div>
+
+<h5 id="provisionsh-provision-flash-and-configure-an-sd-card"><code class="language-plaintext highlighter-rouge">provision.sh</code>: Provision (flash and configure) an SD card.</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./provision.sh &lt;SOURCE_IMG&gt; &lt;DEST_DEV&gt; &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt;
+</code></pre></div></div>
+
+<h5 id="remotesh-write-configuration-filled-accordingly-to-a-deployment-via-ssh"><code class="language-plaintext highlighter-rouge">remote.sh</code>: Write configuration filled accordingly to a deployment via ssh.</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./remote.sh &lt;TEMPLATE_PATH&gt; &lt;DEPLOYMENT&gt; &lt;SSH_HOST&gt;
+</code></pre></div></div>
+
+<h5 id="wireguardsh-print-wireguard-configuration-and-append-to-sshwireguard-config"><code class="language-plaintext highlighter-rouge">wireguard.sh</code>: Print wireguard configuration and append to ssh/wireguard config.</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./wireguard.sh &lt;DEPLOYMENT&gt;
+</code></pre></div></div>
+
+<h5 id="wireguard-fullsh-recreate-wireguard-configuration-for-all-deployments"><code class="language-plaintext highlighter-rouge">wireguard-full.sh</code>: Recreate wireguard configuration for all deployments</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>usage: ./wireguard-full.sh
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Nature40DocumentationProject/unit01/power_supply.html" class="pagination--pager" title="Power Supply
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+      <li><a href="https://twitter.com/SensingBiodiv"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="https://github.com/nature40"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/Nature40DocumentationProject/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright"> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> &copy; 2020 Natur 4.0
+. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>, <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> &amp; <a href="https://www.uni-marburg.de/fb19" rel="nofollow">Geography@Marburg University</a>.</div>
+
+
+
+      </footer>
+    </div>
+
+    
+  <script src="/Nature40DocumentationProject/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

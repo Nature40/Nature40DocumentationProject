@@ -6,61 +6,56 @@ header:
   overlay_color: "#000"
   overlay_filter: 0.6
   overlay_image: "/assets/images/sensor_deployment_title.jpg"
-  caption: 'Photo credit: [**Natur 40**](https://www.uni-marburg.de/natur40)'
-  cta_label: go to info units
+  caption: 'Photo credit: [Nature 4.0](https://www.uni-marburg.de/nature40)'
+  cta_label: Go to documentation units.
   cta_url: "/units.html"
 
-excerpt: Information hub of all publicly relevant nature40 concerns
+excerpt: Details on networked environmental observation systems and installation manuals.
 
 feature_row_intro:
-- excerpt: Documentation Unit of  [LOEWE Nature4.0 documentation project](https://https://nature40.github.io/) at Marburg University
+- excerpt: Documentation Project of  [LOEWE Nature 4.0 - Sensing Biodiversity](https://www.uni-marburg.de/nature40).
 
 feature_row_ilos:
 - image_path: "/assets/images/icon.jpg"
   alt: Cutout of deployment Map.
   title: Overview
   excerpt: "Template..."
-  
+
 panel1:
   - url: /assets/imgages/official/logo_loewe.png
     image_path: /assets/images/official/logo_loewe.png
-    alt: "LOEWE Logo"    
+    alt: "LOEWE logo."    
   - url: /assets/imgages/official/logo_n40.png
     image_path: /assets/images/official/logo_n40.png
-    alt: "Natur 40  Logo"       
+    alt: "Nature 4.0  logo."       
   - url: /assets/imgages/official/logo_umr.svg
     image_path: /assets/images/official/logo_umr.svg
-    alt: "University of Marburg Logo"
+    alt: "University of Marburg logo."
   - url: /assets/imgages/official/logo_senkenberg.png
     image_path: /assets/images/official/logo_senkenberg.png
-    alt: "Senkenberg Logo"
+    alt: "Senkenberg logo."
   - url: /assets/imgages/official/logo_jlug.svg
     image_path: /assets/images/official/logo_jlug.svg
-    alt: "University of Giessen Logo"
+    alt: "University of Giessen logo."
   - url: /assets/imgages/official/logo_tud.svg
     image_path: /assets/images/official/logo_tud.svg
-    alt: "Technival University of Darmstadt Logo"    
- 
+    alt: "Technival University of Darmstadt logo."    
+
 ---
 
 {% include feature_row id="feature_row_intro" type="center" %}
 
 
-# Intended goals
-This documentation yields to be an reference for all public Natur40 documentations issues
-
-* to clarify what sensor is retrieving what data for what purpose
-* to document the position and IDs of the sensors 
-* to communicate sensor and data workflow
-
+# Purpose
+The documentation provides information on
+* sensor constructions and setups
+* communication pathways and data workflows
 
 
 # Nature 4.0 - Sensing Biodiversity
 
-The LOEWE project Nature 4.0 sets as its aim to enable efficient monitoring of environmental processes through the means of connected sensor networks in order to draw benefits for nature and species conservation and the sustainable use of ecosystem services. Innovative data acquisition and processing techniques need to be developed for a spatial and temporal comprehensive monitoring of our landscapes and ecosystems. The basic tool-kit on the side of data acquisition consists of a spatially-dispersed network of environmental sensors, unmanned aerial vehicles (UAV), automatic rovers as well as low-invasive sensors placed on animals and humans moving through the landscape to be monitored. A very central role comes to the so-called SensorBoxes, which allow for a comprehensive, local-scale and continuous measurement of important environmental variables. 
+The aim of LOEWE's Nature4.0 project is to develop a prototype of Nature 4.0, a modular environmental monitoring system for high-resolution observation of species, habitats and processes relevant to nature conservation. Natur4.0 is based on the combination of expert knowledge and networked remote sensing and environmental sensors, which are attached to stationary and mobile platforms such as trees, UAVs, moving robots and animals. Together with powerful data integration and data analysis methods, Nature4.0 enables the differentiated and effective observation of landscapes.
 
 # Consortium
 
 {% include gallery id="panel1"   layout ="third"  %}
-
-
