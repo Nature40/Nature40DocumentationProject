@@ -76,7 +76,7 @@ At the moment eight temperature/humidity sensors and a climate base station with
 |GW100A-WIFIFB27|C90B7356EFDA9 9C5584B057DA2363EDB|3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |       |       |
 |GW100A-WIFIFC29|CC354E3266838 4323E5CB75B8D4A4722|7c    |f   |b8  |92  |9c  |c   |57  |53  |9d  |       |       |
 
-## Calibration oncept
+## Calibration Concept
 
 The low budget Sensors are usually lacking of a stable measurment quality. To obtain reliable microclimate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identfy sensor wich produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
 For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
