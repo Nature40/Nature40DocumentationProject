@@ -65,8 +65,18 @@ At the moment eight temperature/humidity sensors and a climate base station with
 * Measuring interval outdoor unit: 16 seconds
 * Power supply:  Outdoor unit: 2 x 1.5V batteries The primary energy source is the solar panel. The batteries provide backup power when solar energy is limited.
 
+## Channel Assignment and and Station Coding
 
-## Calibration Concept
+|HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|SoilCh1|SoilCh2|
+|---------------|--------------------------------|------|----|----|----|----|----|----|----|----|-------|-------|
+|GW100A-WIFI23C6|82EB09C99462A1AEB32109AFC514F264|78    |f3  |b8  |    |4   |    |    |    |93  |c692   |c825   |
+|GW100A-WIFI243E|E5C37C83C2C1EB2C62BC8FC299D8E281|45    |e0  |b8  |49  |c8  |42  |eb  |20  |bc  |       |       |
+|GW100A-WIFIF774|D3E7B46BC773DA5D0D30F7B94570700F|cc    |40  |b8  |22  |bb  |d   |db  |5b  |65  |       |       |
+|GW100A-WIFIF824|64B95BE38E36DB75ECE69E193C9CFD62|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |7a  |       |       |
+|GW100A-WIFIFB27|C90B7356EFDA99C5584B057DA2363EDB|3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |       |       |
+|GW100A-WIFIFC29|CC354E32668384323E5CB75B8D4A4722|7c    |f   |b8  |92  |9c  |c   |57  |53  |9d  |       |       |
+
+## Calibration oncept
 
 The low budget Sensors are usually lacking of a stable measurment quality. To obtain reliable microclimate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identfy sensor wich produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
 For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
