@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Nature 4.0 Sensorboxes - Overview | LOEWE Natur4.0 Documentation Project</title>
-<meta name="description" content="On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases.  ">
+<!-- begin _includes/seo.html --><title>Nature 4.0 Sensor Boxes | LOEWE Natur4.0 Documentation Project</title>
+<meta name="description" content="Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.  ">
 
 
   <meta name="author" content="Christoph Reudenbach">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="LOEWE Natur4.0 Documentation Project">
-<meta property="og:title" content="Nature 4.0 Sensorboxes - Overview">
+<meta property="og:title" content="Nature 4.0 Sensor Boxes">
 <meta property="og:url" content="http://localhost:4000/Nature40DocumentationProject/unit01/01-sensorboxes.html">
 
 
-  <meta property="og:description" content="On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases.  ">
+  <meta property="og:description" content="Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.  ">
 
 
 
@@ -32,8 +32,8 @@
 
 
   <meta name="twitter:site" content="@SensingBiodiv">
-  <meta name="twitter:title" content="Nature 4.0 Sensorboxes - Overview">
-  <meta name="twitter:description" content="On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases.  ">
+  <meta name="twitter:title" content="Nature 4.0 Sensor Boxes">
+  <meta name="twitter:description" content="Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.  ">
   <meta name="twitter:url" content="http://localhost:4000/Nature40DocumentationProject/unit01/01-sensorboxes.html">
 
   
@@ -47,7 +47,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-06-07T00:52:36+02:00">
+  <meta property="article:published_time" content="2020-06-07T00:56:44+02:00">
 
 
 
@@ -188,7 +188,7 @@
   style=" background-image: url('');"
 >
   
-    <img src="/Nature40DocumentationProject/assets/images/01-splash.jpg" alt="Image Panel Natur 4.0 Sensorboxes" class="page__hero-image">
+    <img src="/Nature40DocumentationProject/assets/images/01-splash.jpg" alt="Image panel Natur 4.0 sensor boxes" class="page__hero-image">
   
   
     <span class="page__hero-caption">Images Natur4.0 / CC0
@@ -240,7 +240,7 @@
             
               
 			  
-			    <li><a href="/Nature40DocumentationProject//unit01/01-sensorboxes.html" class="active">Nature 4.0 Sensorboxes - Overview</a></li>
+			    <li><a href="/Nature40DocumentationProject//unit01/01-sensorboxes.html" class="active">Nature 4.0 Sensor Boxes</a></li>
 			  
             
               
@@ -341,15 +341,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Nature 4.0 Sensorboxes - Overview">
-    <meta itemprop="description" content="On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases.">
+    <meta itemprop="headline" content="Nature 4.0 Sensor Boxes">
+    <meta itemprop="description" content="Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.">
     
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Nature 4.0 Sensorboxes - Overview
+          <h1 id="page-title" class="page__title" itemprop="headline">Nature 4.0 Sensor Boxes
 </h1>
           
         </header>
@@ -361,23 +361,19 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
               <ul class="toc__menu">
-  <li><a href="#planets--moons">Planets &amp; Moons</a></li>
-  <li><a href="#satellites--probes">Satellites &amp; Probes</a></li>
+  <li><a href="#planets-and-moons">Planets and Moons</a></li>
+  <li><a href="#satellites-and-probes">Satellites and Probes</a></li>
+  <li><a href="#sensorbox">Sensorbox</a></li>
+  <li><a href="#software">Software</a></li>
+  <li><a href="#additional-sources">Additional sources</a></li>
 </ul>
 
             </nav>
           </aside>
         
-        <p>On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases. <!--more--></p>
-
-<p>This page documents the <a href="hardware">hardware construction</a>, <a href="software">software aspects</a> as well as the <a href="liftengine#deployment-of-the-base-station">actual deployment</a> of a station.</p>
-
-<p>We follow a classification defined in the project:</p>
-
-<p>The sensorboxes system is based upon homogeneous hardware components. This helps to get experienced with the components, and allows to get faster in construction.</p>
-
-<p>In the current state, the sensor system consists of the following integrated boxes:</p>
-
+        <p>Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases.
+<!--more-->
+This section documents the hardware, software and deployment of our stations. Stations are named as follows:</p>
 <ul>
   <li><a href="power_supply">Power Supply</a>: containment, solar charger, connectors</li>
   <li><a href="planet">Planet</a>: Static unit with networking and storage capabilities</li>
@@ -386,18 +382,16 @@
   <li><a href="liftcontroller">Lift Controller</a>: Helper unit, controlling the motor</li>
 </ul>
 
-<h3 id="planets--moons">Planets &amp; Moons</h3>
+<h2 id="planets-and-moons">Planets and Moons</h2>
 
-<p>We refer to Planets and Moons for sensorboxes with higher processing capabilities, which, e.g., fulfill infrastructural tasks. A planet explicitly has the task to collect data for longer periods of time, while a moon can process data, but is intendet to offload its data quite frequently.</p>
+<p>We refer to <em>planets</em> and <em>moons</em> for sensor boxes with higher processing capabilities fulfilling infrastructural tasks. A planet explicitly has the task to collect data over longer time periods, while a moon can process data, but has to offload its data quite frequently.</p>
 
-<h3 id="satellites--probes">Satellites &amp; Probes</h3>
+<h2 id="satellites-and-probes">Satellites and Probes</h2>
 
-<p>Satellites and Probes are devices fulfilling one specific task, which allows them to have advantages by using deep-sleep capabilities of modern devices. While they can work independently by writing their data e.g. onto an SD card, they are built to make use of the infrastucture offered by our planets and moons. A satellite is bound to a Planet or Moon, while a Probe works independently from one.</p>
+<p><em>Satellites</em> and <em>probes</em> are devices fulfilling one specific task. This allows them to take advantages from deep-sleep capabilities of modern devices. While they can work independently by writing their data e.g. onto an SD card, they are built to make use of the communication and storage infrastructure offered by our planets and moons. A satellite is bound to a planet or moon, while a probe works independently from one.</p>
 
-<h2 id="a-sensorbox">A Sensorbox</h2>
-
-<p>The figure below shows a Moon Sensorbox, which is able to be moved along a tree, to record microclimate, bird songs and canope images on different heights.</p>
-
+<h2 id="sensorbox">Sensorbox</h2>
+<p>The figure below shows a moon sensorbox, which is able to vertically move up along a tree in order to record microclimate, bird songs and canopy images at different heights.</p>
 <figure class="">
 
   
@@ -407,23 +401,17 @@
   
   
 </figure>
-
-<p>The Sensorbox contains a Raspberry Pi Single-Board-Computer which records the connected sensors consisting of a camera, a microphone, temperature &amp; humidity and a lux sensor. It is powered by a generic powerbank, which itself is charged through a QI charging pad, when at the boottom of the station.</p>
+<p>The sensorbox contains a Raspberry Pi single-board-computer which records the connected sensors consisting of a camera, a microphone, temperature &amp; humidity and a lux sensor. It is powered by a generic powerbank, which itself is charged through a QI charging pad, when at the bottom of the station.</p>
 
 <h2 id="software">Software</h2>
-
-<p>The Sensorboxes used in this project are based on two different platforms:</p>
-
+<p>The sensor boxes used in this project are based on two different platforms:</p>
 <ol>
-  <li><a href="http://localhost:4000/Nature40DocumentationProject//pages/Software/PiBased/">Raspberry Pi-based Sensorboxes</a> for date-intensive applications, such as photos or videos, and</li>
+  <li><a href="http://localhost:4000/Nature40DocumentationProject//pages/Software/PiBased/">Raspberry Pi-based Sensorboxes</a> for date-intensive applications, such as photos or videos.</li>
   <li>Arduino-based boxes for easier tasks and sensors, such as temperature or humidity.</li>
 </ol>
 
-<h2 id="open-source">Open Source</h2>
-
-<p>Our project works with Commodity-Off-the-Shelf (COTS) hardware for whereever possible, however there are some custom made and 3D-printed parts, which are <a href="https://github.com/Nature40/Sensorboxes-Design">available at GitHub</a>.</p>
-
-<p><a href="https://github.com/Nature40/pysensorproxy">Pysensorproxy</a>, used to record sensor meterings, as well as <a href="https://github.com/Nature40/pimod">Pimod</a>, implemented to create and configure Raspberry Pi images, is available Open Source and under a permissive license on GitHub.</p>
+<h2 id="additional-sources">Additional sources</h2>
+<p>Our project works with Commodity-Off-the-Shelf (COTS) hardware wherever possible. Custom made and 3D-printed parts are described in the [Sensorboxes-Design repository] (https://github.com/Nature40/Sensorboxes-Design). Software for recording sensor data is available through the <a href="https://github.com/Nature40/pysensorproxy">Pysensorproxy repository</a> and Raspberry Pi images can be configured with helpers from the <a href="https://github.com/Nature40/pimod">Pimod repository</a>.</p>
 
         
       </section>

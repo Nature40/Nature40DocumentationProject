@@ -1,6 +1,6 @@
 var store = [{
-        "title": "Nature 4.0 Sensorboxes - Overview",
-        "excerpt":"On this page the Sensorboxes created in the Nature 4.0 project are described and documented. Our sensor system consists of multiple different box types, matching different use cases. This page documents the hardware construction, software aspects as well as the actual deployment of a station. We follow a classification defined...","categories": ["Sensor Boxes"],
+        "title": "Nature 4.0 Sensor Boxes",
+        "excerpt":"Description of sensors and sensor boxes designed and used in the Nature 4.0 project. The sensor systems encompass multiple different box types and use cases. This section documents the hardware, software and deployment of our stations. Stations are named as follows: Power Supply: containment, solar charger, connectors Planet: Static unit...","categories": ["Sensor Boxes"],
         "tags": ["Unit|01"],
         "url": "http://localhost:4000/Nature40DocumentationProject/unit01/01-sensorboxes.html",
         "teaser": null
@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Power Supply",
-        "excerpt":"The power supply box is designed to safely supply a range of demanding energy consumers with power. It largely consists of components according to industry standards. Especially the mechanical strength as well as the high water and gas tightness and the possibility to integrate 2 * 120Ah lead gel batteries...","categories": ["Sensor Boxes"],
+        "excerpt":"The power supply box is designed to safely supply a range of demanding energy consumers with power. It consists of industry standard components. Battery Box with typical installation Switching scheme The battery box has a very simple design. Besides the cabling, it contains a solar charge regulator, a fuse panel...","categories": ["Sensor Boxes"],
         "tags": ["Unit|01"],
         "url": "http://localhost:4000/Nature40DocumentationProject/unit01/power_supply.html",
         "teaser": null
