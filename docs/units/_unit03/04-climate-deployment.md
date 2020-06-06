@@ -7,6 +7,7 @@ header:
   image_description: "Marburg University Forest - Central Area"
   caption: "3D Pointcloud: M. Ludwig / CC0"
   
+  
 panel1:
   - url: /assets/images/calib_1_1.jpg
     image_path: /assets/images/calib_1_1.jpg
