@@ -8,14 +8,14 @@ header:
   caption: "3D Pointcloud: M. Ludwig / CC0"
   
 panel1:
-  - url: /assets/images/construction/calib_1_1.jpeg
-    image_path: /assets/images/construction/calib_1_1.jpeg
+  - url: /assets/images/calib_1_1.jpg
+    image_path: /assets/images/calib_1_1.jpg
     alt: "Calibration Step 1a"
-  - url: /assets/images/construction/calib_1_2.jpeg
-    image_path: /assets/images/construction/calib_1_2.jpeg
+  - url: /assets/images/calib_1_2.jpg
+    image_path: /assets/images/calib_1_2.jpg
     alt: "Calibration Step 1b"
-  - url: /assets/images/construction/calib_1_3.jpeg
-    image_path: /assets/images/construction/calib_1_3.jpeg
+  - url: /assets/images/calib_1_3.jpg
+    image_path: /assets/images/calib_1_3.jpg
     alt: "Calibration Step 1c"   
 ---
 
