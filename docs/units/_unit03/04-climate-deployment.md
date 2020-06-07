@@ -23,7 +23,7 @@ panel1:
 
 The currently used sensors are from Fine Offset Electronics and in Natur 40 identical in construction from froggit as the so-called DP series and from ecowitt with the original series identification GW-1000.<!--more-->
 
-At the moment eight temperature/humidity sensors and a climate base station with wind vector, precipitation irradiance and temperature/humidity are linked to the WiFi Hub via proper LoRa. The Wifi Hub in turn uses any accessible WLAN to pass on the data to a server via network.  
+Currently 6 Wifi Hubs with 8 sensors and one base station each are connected  via via LoRa radio. The base station is equipped with wind vector, precipitation irradiance and temperature/humidity sensors. The Wifi Hub in turn uses any accessible WLAN to pass on the data in this case via mobile network to a data server.  
 
 ## Sensor Specification 
 
