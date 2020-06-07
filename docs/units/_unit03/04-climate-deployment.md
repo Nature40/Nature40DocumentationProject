@@ -30,40 +30,33 @@ At the moment eight temperature/humidity sensors and a climate base station with
 ### DP1500 WiFi hub:
 * Frequency: 868Mhz
 * Transmission power: 15.06dBm
-* Temperature Measuring range: -10°C to +60°C (14°F - 140°F)
-* Temperature Resolution: 0.1°C, 0.1°F
-* Temperature accuracy: +/- 1°C
-* Air humidity Measuring range: 10% - 99%
-* Humidity Resolution: 1%.
-* Air humidity Measuring accuracy: +/- 5%.
-* Air pressure Measuring range: 300-1100hPa (8.85 - 32.5 inHg)
-* Air pressure accuracy: +/- 5hPa
-* Air pressure Resolution: 0.1 hPa (0.01 inHg)
+* Temperature measuring range: -10°C to +60°C, resolution: 0.1°C, accuracy: +/- 1°C
+* Air humidity measuring range: 10% - 99%, Resolution: 1%, accuracy: +/- 5%.
+* Air pressure measuring range: 300-1100hPa, resolution: 0.1 hPa, accuracy: +/- 5hPa
 * Power supply: USB 5V
 
 ### DP50 temperature/humidity sensor:
 * Frequency: 868Mhz
 * Transmission power: -6.44dBm
-* Temperature Measuring range: -10°C to +60°C (14°F to 140°F)
-* Temperature Resolution: 0.1.°C / 0.1°F
-* Temperature accuracy: +/- 1°C
-* Air humidity Measuring range: 10% - 99%
-* Humidity Resolution: 1%.
-* Air humidity Accuracy: +/- 5%.
+* Temperature measuring range: -10°C to +60°C, resolution: 0.1.°C, accuracy: +/- 1°C
+* Air humidity measuring range: 10% - 99%, resolution: 1%, accuracy: +/- 5%.
 * Transmission interval: 48 seconds
 * Power supply: 2 x 1.5V AA batteries
   
 ### Base Unit:
 * Transmission distance in open field: 100m
 * Frequency: 868Mhz
-* Temperature range: -40°C to +60°C
-* Measuring range rel. humidity: 10% - 99%
-* Precipitation: 0-9999mm
-* Wind speed: 0-50m/s
-* UVI - Range: 0 - 15 index
-* Light: 0 - 200k Lux
+* Temperature range: -40°C to +60°C, accuracy: +/- 1°C
+* Measuring range rel. humidity: 10% - 99%, accuracy: +/- 5%
+* Precipitation: 0-9999mm, resolution  +/- 0.25mm, accuracy: +/- 10%
+* Wind speed: 0-50m/s, accuracy: +/- 3.5 km/h or 10%
+* Wind speed/gust calculation every 16 s
+* Wind direction accuracy: +/- 1°
+* UVI - Range: 0 - 15 index, UV accuracy: +/- 15%
+* Light: 0 - 200k Lux, Solar radiation accuracy +/- 15%
 * Measuring interval outdoor unit: 16 seconds
 * Power supply:  Outdoor unit: 2 x 1.5V batteries The primary energy source is the solar panel. The batteries provide backup power when solar energy is limited.
+
 
 ## Channel Assignment and and Station Coding
 
