@@ -30,16 +30,16 @@ At the moment eight temperature/humidity sensors and a climate base station with
 ### DP1500 WiFi hub:
 * Frequency: 868Mhz
 * Transmission power: 15.06dBm
-* Temperature measuring range: -10°C to +60°C, resolution: 0.1°C, accuracy: +/- 1°C
-* Air humidity measuring range: 10% - 99%, Resolution: 1%, accuracy: +/- 5%.
-* Air pressure measuring range: 300-1100hPa, resolution: 0.1 hPa, accuracy: +/- 5hPa
+* Temperature range: -10°C to +60°C, resolution: 0.1°C, accuracy: +/- 1°C
+* Air humidity range: 10% - 99%, Resolution: 1%, accuracy: +/- 5%.
+* Air pressure range: 300-1100hPa, resolution: 0.1 hPa, accuracy: +/- 5hPa
 * Power supply: USB 5V
 
 ### DP50 temperature/humidity sensor:
 * Frequency: 868Mhz
 * Transmission power: -6.44dBm
-* Temperature measuring range: -10°C to +60°C, resolution: 0.1.°C, accuracy: +/- 1°C
-* Air humidity measuring range: 10% - 99%, resolution: 1%, accuracy: +/- 5%.
+* Temperature range: -10°C to +60°C, resolution: 0.1.°C, accuracy: +/- 1°C
+* Air humidity range: 10% - 99%, resolution: 1%, accuracy: +/- 5%.
 * Transmission interval: 48 seconds
 * Power supply: 2 x 1.5V AA batteries
   
