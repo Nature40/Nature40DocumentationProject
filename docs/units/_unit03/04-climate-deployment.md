@@ -84,7 +84,7 @@ Currently 6 Wifi Hubs with 8 sensors and one base station each are connected  vi
 The low budget Sensors are usually lacking of a stable measurment quality. To obtain reliable microclimate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identfy sensor wich produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
 For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
 
-### First Calibration Period
+### Pre-Calibration
 
 The first calibration step is completed. 
 
