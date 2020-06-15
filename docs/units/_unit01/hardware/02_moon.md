@@ -1,5 +1,5 @@
 ---
-title: Vertically moving Sensorbox - Moon
+title: Sensorbox Type - Lift-Sensorbox
 toc: true
 toc_label: Content
 header:
@@ -40,9 +40,8 @@ panel3:
 
 ---
 
-## Building a Moon
 
-Building a Planet sensorbox will be described in individual steps in this document. 
+Building a Planet sensorbox from the type *Lift-Sensorbox* (formerly known as moon)  will be described in individual steps in this document. 
 
 ### Box and Hinges
 

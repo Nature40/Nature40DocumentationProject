@@ -1,5 +1,5 @@
 ---
-title: Static Sensorbox - Planet
+title: Basic Sensorbox - Planet
 toc: true
 toc_label: Content
 header:
