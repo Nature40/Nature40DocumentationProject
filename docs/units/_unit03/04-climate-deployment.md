@@ -108,6 +108,5 @@ The field calibration step is running.
 
 The sensors are running on a calibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunday 14th June. Five minutes live data is available at the ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
 Eight minute raw data is available at the [sensingbiodiversity](https://137.248.191.215:8989/) server.
-
-Up to now none of the uploaded raw data is checked systematically neither validated.
+At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
