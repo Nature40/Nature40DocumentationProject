@@ -31,9 +31,9 @@ panel2:
 ---
 
 
-The currently used sensors are from Fine Offset Electronics and in Natur 40 identical in construction from froggit as the so-called DP series and from ecowitt with the original series identification GW-1000.<!--more-->
+The currently used sensors are from Fine Offset Electronics and in Nature 40 identical in construction from froggit as the so-called DP series and from ecowitt with the original series identification GW-1000.<!--more-->
 
-Currently 5 Wifi Hubs with 8 sensors and one base station each are connected  via via LoRa radio. The base station is equipped with wind vector, precipitation irradiance and temperature/humidity sensors. The Wifi Hub in turn uses any accessible WLAN to pass on the data in this case via mobile network to a data server.  
+Currently 5 WiFi Hubs with 8 sensors and one base station each are connected  via via LoRa radio. The base station is equipped with wind vector, precipitation irradiance and temperature/humidity sensors. The WiFi Hub in turn uses any accessible WLAN to pass on the data in this case via mobile network to a data server.  
 
 ## Sensor Specification 
 
@@ -80,7 +80,7 @@ Currently 5 Wifi Hubs with 8 sensors and one base station each are connected  vi
 
 ## Calibration Concept
 
-The low budget Sensors are usually lacking of a stable measurment quality. To obtain reliable microclimate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identfy sensor wich produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
+The low budget Sensors are usually lacking of a stable measurement quality. To obtain reliable micro climate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identify sensor which produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
 For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
 
 ### Pre-Calibration
@@ -106,5 +106,8 @@ The field calibration step is running.
 
 {% include gallery id="panel2"  caption= "*Field Calibration setup. Overall setup (left), Detail of the modified GW1000 field unit  (middle), Passive radiation shield array (right)*" layout ="third"  %}
 
-The sensors are running on a clibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunddy 14th June. Five minutes live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
+The sensors are running on a calibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunday 14th June. Five minutes live data is available at the ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
 Eight minute raw data is available at the [sensingbiodiversity](https://137.248.191.215:8989/) server.
+
+Up to now none of the uploaded raw data is checked systematically neither validated.
+{: .notice--danger}
