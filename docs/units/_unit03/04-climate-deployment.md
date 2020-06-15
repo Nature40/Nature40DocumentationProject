@@ -37,7 +37,7 @@ Currently 6 Wifi Hubs with 8 sensors and one base station each are connected  vi
 
 ## Sensor Specification 
 
-### DP1500 WiFi hub:
+### GW1000/DP1500 WiFi hub:
 * Frequency: 868Mhz
 * Transmission power: 15.06dBm
 * Temperature range: -10°C to +60°C, resolution: 0.1°C, accuracy: +/- 1°C
