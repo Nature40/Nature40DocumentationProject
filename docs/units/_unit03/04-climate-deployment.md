@@ -70,13 +70,13 @@ Currently 5 WiFi Hubs with 8 sensors and one base station each are connected  vi
 
 ## Channel Assignment and and Station Coding
 
-|HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|SoilCh1|SoilCh2|
-|---------------|--------------------------------|------|----|----|----|----|----|----|----|----|-------|-------|
-|GW100A-WIFI243E|E5C37C83C2C1EB2C 62BC8FC299D8E281|45    |e0  |b8  |49  |c8  |42  |eb  |20  |bc  |       |       |
-|GW100A-WIFIF774|D3E7B46BC773DA5D 0D30F7B94570700F|cc    |40  |b8  |22  |bb  |d   |db  |5b  |65  |       |       |
-|GW100A-WIFIF824|64B95BE38E36DB75 ECE69E193C9CFD62|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |7a  |       |       |
-|GW100A-WIFIFB27|C90B7356EFDA99C5 584B057DA2363EDB|3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |       |       |
-|GW100A-WIFIFC29|CC354E3266838432 3E5CB75B8D4A4722|7c    |f   |b8  |92  |9c  |c   |57  |53  |9d  |       |       |
+|HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
+|---------------|--------------------------------|------|----|----|----|----|----|----|----|----|
+|GW100A-WIFI243E|E5C37C83C2C1EB2C 62BC8FC299D8E281|45    |e0  |b8  |49  |c8  |42  |eb  |20  |bc  |
+|GW100A-WIFIF774|D3E7B46BC773DA5D 0D30F7B94570700F|cc    |40  |b8  |22  |bb  |d   |db  |5b  |65  |
+|GW100A-WIFIF824|64B95BE38E36DB75 ECE69E193C9CFD62|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |7a  |
+|GW100A-WIFIFB27|C90B7356EFDA99C5 584B057DA2363EDB|3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |
+|GW100A-WIFIFC29|CC354E3266838432 3E5CB75B8D4A4722|7c    |f   |b8  |92  |9c  |c   |57  |53  |9d  |
 
 ## Calibration Concept
 
