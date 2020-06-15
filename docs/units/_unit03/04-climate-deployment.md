@@ -33,7 +33,7 @@ panel2:
 
 The currently used sensors are from Fine Offset Electronics and in Natur 40 identical in construction from froggit as the so-called DP series and from ecowitt with the original series identification GW-1000.<!--more-->
 
-Currently 6 Wifi Hubs with 8 sensors and one base station each are connected  via via LoRa radio. The base station is equipped with wind vector, precipitation irradiance and temperature/humidity sensors. The Wifi Hub in turn uses any accessible WLAN to pass on the data in this case via mobile network to a data server.  
+Currently 5 Wifi Hubs with 8 sensors and one base station each are connected  via via LoRa radio. The base station is equipped with wind vector, precipitation irradiance and temperature/humidity sensors. The Wifi Hub in turn uses any accessible WLAN to pass on the data in this case via mobile network to a data server.  
 
 ## Sensor Specification 
 
@@ -72,7 +72,6 @@ Currently 6 Wifi Hubs with 8 sensors and one base station each are connected  vi
 
 |HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|SoilCh1|SoilCh2|
 |---------------|--------------------------------|------|----|----|----|----|----|----|----|----|-------|-------|
-|GW100A-WIFI23C6|82EB09C99462A1AE B32109AFC514F264|78    |f3  |b8  |    |4   |    |    |    |93  |c692   |c825   |
 |GW100A-WIFI243E|E5C37C83C2C1EB2C 62BC8FC299D8E281|45    |e0  |b8  |49  |c8  |42  |eb  |20  |bc  |       |       |
 |GW100A-WIFIF774|D3E7B46BC773DA5D 0D30F7B94570700F|cc    |40  |b8  |22  |bb  |d   |db  |5b  |65  |       |       |
 |GW100A-WIFIF824|64B95BE38E36DB75 ECE69E193C9CFD62|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |7a  |       |       |

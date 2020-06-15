@@ -16,7 +16,7 @@ This section documents the hardware, software and deployment of our stations. St
 * [Power Supply](00_power_supply): containment, solar charger, connectors
 * [Planet](01_planet): Static unit with networking and storage capabilities
 * [Moon](02_moon): Vertically moving unit
-* [GW1000 Hub](03_gw1000): Static sensorbox fpr climate mesurements and data retrieval
+* [GW1000 Hub](03_gw1000): Static sensorbox for climate mesurements and data retrieval
 * [Lift Engine](04_liftengine): Wooden box holding a motor
 * [Lift Controller](05_liftcontroller): Helper unit, controlling the motor
 
