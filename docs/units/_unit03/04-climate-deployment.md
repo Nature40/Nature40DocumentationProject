@@ -106,7 +106,8 @@ The field calibration step is running.
 
 {% include gallery id="panel2"  caption= "*The installation of the field experiment. Overall setup (left), Detail of the gw1000-sensorbox  (middle), Passive radiation shield array (right)*" layout ="third"  %}
 
-The sensors are currently running in the Marburg Open Forest at the reference station Grubenwiese in a measuring campaign for calibration purposes. Five minutes live data is available at the ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
+The sensors are currently running in the Marburg Open Forest at the reference station *Grubenwiese* in a measuring campaign for calibration purposes. Five minutes live data is available at the ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
 Eight minute raw data is available at the [sensingbiodiversity](https://137.248.191.215:8989/) server.
+
 At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
