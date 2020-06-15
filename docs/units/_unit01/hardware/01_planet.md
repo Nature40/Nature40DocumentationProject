@@ -1,5 +1,5 @@
 ---
-title: Basic Sensorbox - Planet
+title: Sensorbox - Type Planet
 toc: true
 toc_label: Content
 header:

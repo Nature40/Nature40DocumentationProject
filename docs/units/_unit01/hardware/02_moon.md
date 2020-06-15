@@ -1,5 +1,5 @@
 ---
-title: Sensorbox Type - Lift-Sensorbox
+title: Sensorbox - Type Lift-Sensorbox
 toc: true
 toc_label: Content
 header:
