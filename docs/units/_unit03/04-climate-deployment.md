@@ -9,15 +9,25 @@ header:
   
   
 panel1:
-  - url: /assets/images/calib_1_1.jpg
-    image_path: /assets/images/calib_1_1.jpg
+  - url: /assets/images/climate_sensors/calib_1_1.jpg
+    image_path: /assets/images/climate_sensors/calib_1_1.jpg
     alt: "Calibration Step 1a"
-  - url: /assets/images/calib_1_2.jpg
-    image_path: /assets/images/calib_1_2.jpg
+  - url: /assets/images/climate_sensors/calib_1_2.jpg
+    image_path: /assets/images/climate_sensors/calib_1_2.jpg
     alt: "Calibration Step 1b"
-  - url: /assets/images/calib_1_3.jpg
-    image_path: /assets/images/calib_1_3.jpg
+  - url: /assets/images/climate_sensors/calib_1_3.jpg
+    image_path: /assets/images/climate_sensors/calib_1_3.jpg
     alt: "Calibration Step 1c"   
+panel2:
+  - url: /assets/images/climate_sensors/calib_2_1.jpg
+    image_path: /assets/images/climate_sensors/calib_2_1.jpg
+    alt: "Calibration Step 2a"
+  - url: /assets/images/climate_sensors/calib_2_2.jpg
+    image_path: /assets/images/climate_sensors/calib_2_2.jpg
+    alt: "Calibration Step 2b"
+  - url: /assets/images/climate_sensors/calib_2_3.jpg
+    image_path: /assets/images/climate_sensors/calib_2_3.jpg
+    alt: "Calibration Step 2c"       
 ---
 
 
@@ -81,3 +91,12 @@ The first calibration step is completed.
 
 {% include gallery id="panel1"  caption= "*Calibration setup. Unprotected Sensors (left), Setup of a radiation shield (middle), all sensor protected with a passive radiation shield (right)*" layout ="third"  %}
 The 40+ sensors will be moved to the Campbell reference station in the Marburg Open Forest at the beginning of week 24, where calibration phase 2 will start.
+
+### Field Calibration 
+
+The field calibration step is running. 
+
+
+{% include gallery id="panel2"  caption= "*Field Calibration setup. Overall setup (left), Detail of the modified GW1000 field unit  (middle), Passive radiation shield array (right)*" layout ="third"  %}
+
+The sensors are running on a clibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunddy 14th June. Live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).

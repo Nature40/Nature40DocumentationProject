@@ -24,7 +24,7 @@ panel1:
     image_path: /assets/images//battery_box/battery_wiring.jpg
     alt: "Wiring details battery"    
   - url: /assets/images/battery_box/battery_fuse.jpg
-    image_path: /assets/images//battery_box/battry_fuse.jpg
+    image_path: /assets/images//battery_box/battery_fuse.jpg
     alt: "Setup of the Fuse"   
     
 
@@ -76,8 +76,16 @@ The battery box has a very simple design. Besides the cabling, it contains a sol
   * 3 x 1,5 mm<sup>2</sup> cables, black
   * 2 x Crimp cable shoes (holding 3 wires)
   * 6 x 6,35mm / 1/4'' crimp [FASTON terminals](https://en.wikipedia.org/wiki/FASTON_terminal)
-Silicone cables, solar cables, plugs and fuse box fulfills industry standards. All cable lugs are crimped and checked.
-{% include gallery id="panel1"  caption= "Wiring details Fuse - Charger - Outlets (left) Wiring details battery (right) " layout ="half"  %}
+
+
+Please note the following points:
+* Silicone cables, solar cables, plugs and fuse box fulfills industry standards. All cable lugs are crimped and checked.
+* The cable lugs are not screwed to the charging cables with cable lugs but through the crimp connection with the end sleeve.
+* A main fuse (e.g. 40A automatic circuit breaker) must be installed 
+
+See also the figure below.
+
+{% include gallery id="panel1"  caption= "Wiring details Fuse - Charger - Outlets (left) Wiring details battery (right) " layout ="third"   %}
 
 ## Mounting
 * Outlets: 6x M3 screw (12mm), washers and nuts
@@ -88,7 +96,6 @@ Silicone cables, solar cables, plugs and fuse box fulfills industry standards. A
   * 4 screws for fuse box
 Cable lugs and plugs are covered with self-vulcanizing tape and additionally insulated.
 
-{% include gallery id="panel2"  caption= "Mounting details inside of the box (left) and outside of the box (right)" layout ="half"  %}
 
 
 
@@ -103,7 +110,7 @@ For safe operation, the following points must be taken into account when setting
 {% include figure image_path="/assets/images/battery_box/01_cleaning area_from_organic_material.jpg" alt="Cleaning box area and cable transects from organic material."  %}
 
 3.) Around this area a further strip with a diameter of at least 1 meter must also be cleared of organic material, especially leaves. Dig up the A-horizon and exclude roots and organic stuff. Note that the wiring sections must also be cleared of combustible organic material.
-{% include figure image_path="/assets/images/battery_box/02_cleaning_box_plot_from_vegetation.jpg" alt="Clearing box area from vegetation and roots."  %}
+{% include figure image_path="/assets/images/battery_box/02_cleaning _box_plot_from_vegetation.jpg" alt="Clearing box area from vegetation and roots."  %}
 
 4.) Check cables and screws for proper seating and integrity.
 {% include figure image_path="/assets/images/battery_box/06_check_cables.jpg" alt="Check cables and screws for proper seating and integrity."  %}
