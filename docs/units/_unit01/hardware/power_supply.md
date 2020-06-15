@@ -23,6 +23,10 @@ panel1:
   - url: /assets/images/battery_box/battery_wiring.jpg
     image_path: /assets/images//battery_box/battery_wiring.jpg
     alt: "Wiring details battery"    
+  - url: /assets/images/battery_box/battery_fuse.jpg
+    image_path: /assets/images//battery_box/battry_fuse.jpg
+    alt: "Setup of the Fuse"   
+    
 
 panel3:
   - url: /assets/images/battery_box/04_dig out_ahorizon.jpg
@@ -31,6 +35,7 @@ panel3:
   - url: /assets/images/battery_box/05_dig_2.jpg
     image_path: /assets/images//battery_box/05_dig_2.jpg
     alt: "Dig up the A-horizon completley down to the rocks"    
+
 
 
 ---
