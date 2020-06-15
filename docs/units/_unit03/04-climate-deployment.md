@@ -106,4 +106,5 @@ The field calibration step is running.
 
 {% include gallery id="panel2"  caption= "*Field Calibration setup. Overall setup (left), Detail of the modified GW1000 field unit  (middle), Passive radiation shield array (right)*" layout ="third"  %}
 
-The sensors are running on a clibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunddy 14th June. Live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
+The sensors are running on a clibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunddy 14th June. Five minutes live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
+Eight minute raw data is available at the [sensingbiodiversity](https://137.248.191.215:8989/) server.
