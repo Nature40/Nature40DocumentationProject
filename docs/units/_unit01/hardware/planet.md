@@ -6,6 +6,72 @@ header:
   image: /assets/images/01-splash.jpg
   image_description: "Image Panel Natur 4.0 Sensorboxes"
   caption: "Images Natur4.0 / CC0"
+
+
+panel1:
+  - url: /assets/images/planet/build-in-socket.png
+    image_path: /assets/images/planet/build-in-socket.png
+    alt: "Build in socket 1"
+  - url: /assets/images/planet//build-in-socket_2.png
+    image_path: /assets/images/planet//build-in-socket_2.png
+    alt: "Build in socket 1"
+
+panel2:
+  - url: /assets/images/planet/cam1.png
+    image_path: /assets/images/planet/cam1.png
+    alt: "camera kit"
+  - url: /assets/images/planet/cam0.png
+    image_path: /assets/images/planet/cam0.png
+    alt: "mounted kit"
+
+panel3:
+  - url: /assets/images/planet/cam2.png
+    image_path: /assets/images/planet/cam2.png
+    alt: "camera housing 1"
+  - url: /assets/images/planet/cam3.png
+    image_path: /assets/images/planet/cam3.png
+    alt: "camera housing 2"
+  - url: /assets/images/planet/cam4.png
+    image_path: /assets/images/planet/cam4.png
+    alt: "camera housing 2"    
+
+panel4:
+  - url: /assets/images/planet/mic_umbrella1.JPG
+    image_path: /assets/images/planet/mic_umbrella1.JPG
+    alt: "Construction Step 1a"
+  - url: /assets/images/planet/mic_umbrella2.JPG
+    image_path: /assets/images/planet/mic_umbrella2.JPG
+    alt: "Construction Step 1b"
+  - url: /assets/images/planet/mic_umbrella3.JPG
+    image_path: /assets/images/planet/mic_umbrella3.JPG
+    alt: "Construction Step 1c"      
+panel5:
+  - url: /assets/images/planet/mic_umbrella4.JPG
+    image_path: /assets/images/planet/mic_umbrella4.JPG
+    alt: "Construction Step 1d"
+  - url: /assets/images/planet/mic_umbrella5.JPG
+    image_path: /assets/images/planet/mic_umbrella5.JPG
+    alt: "Construction Step 1e"
+
+panel6:
+  - url: /assets/images/planet/mic_cloth_1.jpg
+    image_path: /assets/images/planet/mic_cloth_1.jpg
+    alt: "Attaching the microphone cloth Step 1a"
+  - url: /assets/images/planet/mic_cloth_2.jpg
+    image_path: /assets/images/planet/mic_cloth_2.jpg
+    alt: "Attaching the microphone cloth Step 1b"
+  - url: /assets/images/planet/mic_cloth_3.jpg
+    image_path: /assets/images/planet/mic_cloth_3.jpg
+    alt: "Attaching the microphone cloth Step 1c"  
+
+panel7:
+  - url: /assets/images/planet/hd1.png
+    image_path: /assets/images/planet/hd1.png
+    alt: "Attaching HD Step 1"
+  - url: /assets/images/planet/hd2.png
+    image_path: /assets/images/planet/hd2.png
+    alt: "Attaching HD Step 2"
+  
 ---
 
 
@@ -18,22 +84,22 @@ Building a Planet sensorbox will be described in individual steps in this docume
 
 The Spelsberg TK PC Box has the ingress protection IP66 - acc. EN 60529 / DIN VDE 0470-1 and an ambient temperature from -35 °C min. to 80 °C max. Due to it's UV resistancy, weatherproof and a rated insulation voltage 690V AC the box is fitting for outdoor application. 
 
-![hingset]({{site.baseurl}}/assets/imgages/planet/hingeset.png)
 
+{% include figure image_path="/assets/images/planet/hingeset.png" alt="Hingeset" caption="*The hingeset is added by using the supplied template*" %}
 The hingeset is added by using the supplied template. 
 
 ### 2. Inlet Socket
 
 The Powercon build-in-socket is embedded by drilling a counterbore (25mm) and 2x M3 Screws placed at the sockets corners. The attached Protective Cap seals the drilling against outside influences like water and dirt.  
 
-![Build-in socket]({{site.baseurl}}/assets/imgages/planet/build-in-socket.png){:width="50%"}![Build-in socket 2]({{site.baseurl}}/assets/imgages/planet/build-in-socket_2.png){:width="50%"}
+{% include gallery id="panel1"  caption= "*Inlet sockets inside (left) outside(right)*" layout ="half"  %}
 
 ### 3. Mounting Socket
 
 To ensure the box to be waterproof the drilled holes should be agglutinated with silicone between the washer and the screws. 
 
-![Socket]({{site.baseurl}}/assets/imgages/planet/socket.png)
 
+{% include figure image_path="/assets/images/planet/socket.png" alt="mounting socket" caption="*The mounting socket*" %}
 
 ### 4. IR-Camera
 
@@ -47,11 +113,11 @@ The IR-Camera can be used to support ecological studies, monitor vegetation grow
 
 The Joy-it IR-Pro 5MP IR CUT CMOS is delivered with two infrared-radiators. Product information can be found [here](https://www.pollin.de/productdownloads/D811018B.PDF). The camera and the radiators can be screwed together easily. The radiators socket and upper part are plugged together by default. Bonding the two parts with hot glew making them more resistant for further outdoor application. 
 
-![IR-Camera 2]({{site.baseurl}}/assets/imgages/planet/cam1.png){:width="50%"}![IR-Camera 1]({{site.baseurl}}/assets/imgages/planet/cam0.png){:width="50%"} 
+{% include gallery id="panel2"  caption= "*The Joy-it IR-Pro 5MP IR CUT CMOS Camera, camera kit (left) , mounted kit (right) *" layout ="half"  %}
 
 The IR-camera case is an individual [3D printed design]({{site.baseurl}}/pages/parts/printing/), containing an insertion for the camera, a detachable lid and a screw threads for the Mini tripod head. Depending on the applied filament, an impregnation should be added additionally.  
 
-![IR-Camera 3]({{site.baseurl}}/assets/imgages/planet/cam2.png){:width="33%" padding=0}![IR-Camera 4]({{site.baseurl}}/assets/imgages/planet/cam3.png){:width="33%" padding=0}![IR-Camera 5]({{site.baseurl}}/assets/imgages/planet/cam4.png){:width="33%" padding=0}
+{% include gallery id="panel3"  caption= "*The IR-Pro camera housing, front side (left) ,inside (middle,) backside (right) *" layout ="third"  %}
 
 A [special extension](https://github.com/Nature40/pysensorproxy/blob/master/sensorproxy/sensors/optical.py) for the IR-Camera with switchable IR Filter is to manually set the led pin using sysfs. 
 
@@ -68,7 +134,8 @@ The RØDE – Smartlav Microphone is composed of following components.
 - acoustic cloth 2.0 - 4102/B2 hydrophobic
 - metal wire 0.9 mm
 
-![Rode]({{site.baseurl}}/assets/imgages/planet/rode.jpg)
+
+{% include figure image_path="/assets/images/planet/rode.jpg" alt="The Rode microphone" caption="*The Rode microphone*" %}
 
 The second preference is a lower price Microphone. 
 
@@ -76,29 +143,32 @@ The second preference is a lower price Microphone.
 - acoustic cloth 2.0 - 4102/B2 hydrophobic
 - metal wire 0.9 mm
 
-![Foxnovo]({{site.baseurl}}/assets/imgages/planet/foxnovo.jpg)
+{% include figure image_path="/assets/images/planet/foxnovo.jpg" alt="The foxnovo microphone" caption="*The foxnovo microphone*" %}
 
-Both microphone types have there individual 3D printed microphone tower, published [here]({{site.baseurl}}/pages/parts/printing/). 
+Both microphone types have there individual 3D printed microphone tower, published [Foxnovo mount](https://github.com/Nature40/Sensorboxes-Design/blob/master/printdesigns/version_1/planet/microphone_mount_small_V1.stl), [Rode mount](https://github.com/Nature40/Sensorboxes-Design/blob/master/printdesigns/version_1/planet/microphone_mount_big_V1.stl). 
 
 To address the problem of incoming water, the microphone will be sourounded by an hydrophobic acoustic cloth. First an acoustic cloths carrier is constructed on top of the microphone tower using the metal wire. 
 
-![Constructing a carrier 1]({{site.baseurl}}/assets/imgages/planet/mic_umbrella1.JPG){:width="33%"}![Constructing a carrier 2]({{site.baseurl}}/assets/imgages/planet/mic_umbrella2.JPG){:width="33%"}![Constructing a carrier 3]({{site.baseurl}}/assets/imgages/planet/mic_umbrella3.JPG){:width="33%"} 
+{% include gallery id="panel4"  caption= "*Construction steps 1-3*" layout ="third"  %}
 
-![Constructing a carrier 4]({{site.baseurl}}/assets/imgages/planet/mic_umbrella4.JPG){:width="33%"}![Constructing a carrier 5]({{site.baseurl}}/assets/imgages/planet/mic_umbrella5.JPG){:width="33%"}
 
-Now the acoustic cloth can be attached.
+{% include gallery id="panel5"  caption= "*Construction steps 4-5*" layout ="third"  %}
 
-![Attaching the microphone cloth]({{site.baseurl}}/assets/imgages/planet/mic_cloth_1.jpg){:width="33%"}![Attaching the microphone cloth]({{site.baseurl}}/assets/imgages/planet/mic_cloth_2.jpg){:width="33%"}![Attaching the microphone cloth]({{site.baseurl}}/assets/imgages/planet/mic_cloth_3.jpg){:width="33%"}
+
+{% include gallery id="panel6"  caption= "*Attaching the Microphone Protection steps 1-3*" layout ="third"  %}
 
 Finally the microphone incl. the tower can be glued on the box. 
 
-![Placing the microphone incl. tower on the box]({{site.baseurl}}/assets/imgages/planet/mic.jpg)
-
+{% include figure image_path="/assets/images/planet/mic.jpg" alt="Placing the microphone incl. tower on the box" caption="*Placing the microphone incl. tower on the box*" %}
 ### 6. Base Plate  
 
-The Raspberry Pi, the Real-time clock as well as DC/DC Converter are directly attached to the [3D printed]({{site.baseurl}}/pages/parts/printing/) baseplate, using 4x C 2,9 X 13 H countersunk-head tapping screw for the Raspberry Pi, hot glue for the real-time clock and a M 4,0 x 12,0 countersunk-head screws for the DC/DC Converter. Using Jumper Cables the Real-time clock is connected to the Raspberry Pi's **G**eneral **P**urpose **I**nput **O**utput (GPIO) interface. 
+The Raspberry Pi, the Real-time clock as well as DC/DC Converter are directly attached to the 
+3D printed [base plate](https://github.com/Nature40/Sensorboxes-Design/blob/master/printdesigns/version_1/gondola/raspi_hex_mount_plate_V1.stl)
 
-![baseplate]({{site.baseurl}}/assets/imgages/planet/baseplate.png)
+The baseplate is using 4x C 2,9 X 13 H countersunk-head tapping screw for the Raspberry Pi, hot glue for the real-time clock and a M 4,0 x 12,0 countersunk-head screws for the DC/DC Converter. Using Jumper Cables the Real-time clock is connected to the Raspberry Pi's **G**eneral **P**urpose **I**nput **O**utput (GPIO) interface. 
+
+
+{% include figure image_path="/assets/images/planet/baseplate.png" alt="Mounting the base plate" caption="*Mounting the RTC and DC/DC converter on the base plate*" %}
 
 
 ### 7. System and Storage 
@@ -107,7 +177,8 @@ The Samsung MB-MC32GA MicroSD card is directly plugged into the Raspberry Pi, th
 
 The integration of the external hard disk allows to store bigger amounts of recorded data as well as a simple data exchange. It's easily attached to the bottom of the box using a dual lock velcro strap. Furthermore it ensures vibration dampening.     
 
-![attaching hd1]({{site.baseurl}}/assets/imgages/planet/hd1.png){:width="50%"}![attaching hd1]({{site.baseurl}}/assets/imgages/planet/hd2.png){:width="50%"}
+
+{% include gallery id="panel7"  caption= "*Mounting  of the external hard disk (left) mounted hard disk (right) *" layout ="half"  %}
 
 
 
@@ -138,7 +209,7 @@ These parts are required to build a sensorbox type planet.
 
 #### Microphone
 
-- [Acoustic cloth 2.0](Acoustic cloth 2.0) - 4102/B2 hydrophobic
+- [Acoustic cloth 2.0](https://www.akustikstoff.com/Acoustic-Cloth-2-0-Water-and-oil-repellent-Stain-resistant-B2-fire-rated/Acoustic-Cloth-2-0-Pre-cut-50-x-160-cm-19-7-x-61-42-Colours::764.html) - 4102/B2 hydrophobic cloth
 - Metal wire 0.9 mm
 
 ##### Option 1: RØDE – Smartlav Microphone
