@@ -88,7 +88,7 @@ For the future a machine learning approach including the radiation, azimuth, tem
 The first calibration step is completed. 
 
 
-{% include gallery id="panel1"  caption= "*Calibration setup. Unprotected Sensors (left), Setup of a radiation shield (middle), all sensors protected with a passive radiation shield (right)*" layout ="third"  %}
+{% include gallery id="panel1"  caption= "*Pre-calibration setup. Un-shielded Sensors (left), Setup of a radiation shield (middle), all sensors protected with a passive radiation shield (right)*" layout ="third"  %}
 The 40+ sensors will be moved to the Campbell reference station in the Marburg Open Forest at the beginning of week 24, where calibration phase 2 will start.
 
 ### Field Calibration 
@@ -104,7 +104,7 @@ More data is available by clicking on the station.
 The field calibration step is running. 
 
 
-{% include gallery id="panel2"  caption= "*Field Calibration setup. Overall setup (left), Detail of the modified GW1000 field unit  (middle), Passive radiation shield array (right)*" layout ="third"  %}
+{% include gallery id="panel2"  caption= "*The installation of the field experiment. Overall setup (left), Detail of the gw1000-sensorbox  (middle), Passive radiation shield array (right)*" layout ="third"  %}
 
 The sensors are running on a calibration campaign at the Campbell reference station in the Marburg Open Forest starting on Sunday 14th June. Five minutes live data is available at the ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243).
 Eight minute raw data is available at the [sensingbiodiversity](https://137.248.191.215:8989/) server.
