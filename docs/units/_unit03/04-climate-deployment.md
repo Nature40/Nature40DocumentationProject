@@ -94,6 +94,14 @@ The 40+ sensors will be moved to the Campbell reference station in the Marburg O
 
 ### Field Calibration 
 
+The current deployment situation of the Micro-Climate-Sensors is shown on the map below. Currently we are running in a calibration mode. 
+
+More data is available by clicking on the station.
+
+{% include media url="/assets/misc/channelsetting_GW1000_calibration" %}
+[Full-screen version of the map]({{ site.baseurl }}/assets/misc/channelsetting_GW1000_calibration.html){:target="_blank"}
+
+
 The field calibration step is running. 
 
 
