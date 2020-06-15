@@ -89,7 +89,7 @@ For the future a machine learning approach including the radiation, azimuth, tem
 The first calibration step is completed. 
 
 
-{% include gallery id="panel1"  caption= "*Calibration setup. Unprotected Sensors (left), Setup of a radiation shield (middle), all sensor protected with a passive radiation shield (right)*" layout ="third"  %}
+{% include gallery id="panel1"  caption= "*Calibration setup. Unprotected Sensors (left), Setup of a radiation shield (middle), all sensors protected with a passive radiation shield (right)*" layout ="third"  %}
 The 40+ sensors will be moved to the Campbell reference station in the Marburg Open Forest at the beginning of week 24, where calibration phase 2 will start.
 
 ### Field Calibration 
