@@ -20,12 +20,14 @@ source "https://rubygems.org"
 # moer: Add lines below to use custom theme and enable use on GitHub pages, too.
 gem "github-pages", group: :jekyll_plugins
 
+#gem 'rails', '6.1.0.alpha', github: 'rails/rails', branch: 'master'
+gem 'rack', github: 'rack/rack'
+
 
 # If you have any plugins, put them here!
 # moer: Add more plugins.
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-admin"
+  gem "jekyll-feed", ">= 0.6"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-gist"
@@ -42,4 +44,7 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 
 
-gem "jekyll", "~> 3.8"
+gem "jekyll", ">= 3.8.6"
+
+
+
