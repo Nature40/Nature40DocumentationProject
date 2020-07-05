@@ -19,6 +19,7 @@ This section documents the hardware, software and deployment of our stations. St
 * [GW1000 Hub](03_gw1000): Static sensorbox for climate mesurements and data retrieval
 * [Lift Engine](04_liftengine): Wooden box holding a motor
 * [Lift Controller](05_liftcontroller): Helper unit, controlling the motor
+* [BatRecorder](06_batrecorder): unit with audio, video and vhf systems to monitor and record audio and videos from bats
 
 ## Planets and Moons
 

@@ -151,3 +151,11 @@ usage: ./wireguard-full.sh
 ```
 
 
+## RTS with pysensorproxy
+
+As all other non thirdparty sensorboxes the radiotracking stations also work with an build image from pimod and based on pysensorproxy. 
+In this version all above features can also be used and additional features were implemented. 
+The additional features are:
+- checking for 4 working radiotracking usb sticks for a valid calculation of the angle of the signal
+- checking for a realistic time for better timesync across different stations
+- checking for transmitted data of the radiotracking usb stick. At some point in time the sticks are connected and have not thrown any error but they do not transmit data
