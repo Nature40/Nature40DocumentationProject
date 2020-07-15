@@ -109,7 +109,7 @@ The field calibration step is running.
 The sensors are currently running in the Marburg Open Forest at the reference station *Grubenwiese* in a measuring campaign for calibration purposes. For a convenient overview please have a look at the ecowitt dashboard (need account). You will find 5 minutes measuements. Five minutes live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243). The the high resolution two minutes raw live data is available at [sensingbiodiversity](http://137.248.191.215:1527/)
 server.
 
-*Note*: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next weekAt this stage, the data have not been checked or validated in any way.
+**Note**: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next week. At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
 
 ## 3D Sensor Deployment
