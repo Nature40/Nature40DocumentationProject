@@ -111,3 +111,13 @@ server.
 
 At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
+
+## 3D Sensor Deployment
+
+Provisional equipment with temperature/humidity sensors (mof_cst_00076). The holders are extended to 40 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
+
+|HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
+|---------------|--------------------------------|------|----|----|----|----|----|----|----|----|
+|GW100A-WIFIF824|[Station 3](https://www.ecowitt.net/home/index?id=20141)|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |22  |
+
+{% include gallery_collection gallery_path = "images/climate/cst0076" caption = "First setup of temperature/humidity sensors at the cst0076" %}
