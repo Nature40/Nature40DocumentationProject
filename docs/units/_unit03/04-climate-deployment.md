@@ -112,9 +112,9 @@ server.
 **Note**: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next week. At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
 
-## 3D Sensor Deployment
+## 3D Tree Sensor Deployment
 
-Provisional equipment with temperature/humidity sensors (mof_cst_00076). The holders are extended to 40 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
+Ongoing provisional equipment with temperature/humidity sensors. The holders are extended to roughly 60 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
 
 |HubId          | CSTID |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
 |---------------|------|------|----|----|----|----|----|----|----|----|
