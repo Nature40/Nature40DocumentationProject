@@ -116,8 +116,11 @@ server.
 
 Provisional equipment with temperature/humidity sensors (mof_cst_00076). The holders are extended to 40 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
 
-|HubId          |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
-|---------------|------|----|----|----|----|----|----|----|----|
-|[GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141)|2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |22  |
+|HubId          | CSTID |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
+|---------------|------|------|----|----|----|----|----|----|----|----|
+|[GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141)| cst_00076 |2f    |33  |ee  |2d  |c0  |fd  |f1  |6e  |22  |
+|[GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20141)|cst_00051 | cst_00076 |3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |
 
 {% include gallery_collection gallery_path = "images/climate/cst0076" caption = "First setup of temperature/humidity sensors at the cst0076" %}
+
+{% include gallery_collection gallery_path = "images/climate/cst0051" caption = "First setup of temperature/humidity sensors at the cst0051" %}
