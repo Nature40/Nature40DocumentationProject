@@ -129,7 +129,7 @@ Ongoing provisional equipment with temperature/humidity sensors. The holders are
 
 {% include gallery_collection gallery_path = "images/climate/cst0002" caption = "First setup of temperature/humidity sensors at the cst0002" %}
 
-## Map of 3D Tree Sensor Trees
+## Map of 3D Climate Sensor Trees
 
 {% include media url="/assets/misc/sensorboxes5_deployment_ele_3d.html" %}
 [Full-screen version of the map]({{ site.baseurl }}/assets/misc/sensorboxes5_deployment_ele_3d.html){:target="_blank"}
