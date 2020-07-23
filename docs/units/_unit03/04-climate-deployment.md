@@ -120,15 +120,16 @@ The equipping of the selected five core study trees with three-dimensionally dis
 ## 3D Climate Data
 
 The sensors are currently running in the Marburg Open Forest at the core study trees that are shown on the underneath map. For a convenient overview please have a look at the ecowitt dashboard (need account). You will find 2 minutes measurements. Two minutes live data is available at the Ecowitt cloud:
-*  [GW100A-WIFIF774](https://www.ecowitt.net/home/index?id=20163)
-*  [GW100A-WIFI243E](https://www.ecowitt.net/home/index?id=20164)
-*  [GW100A-WIFIFC29](https://www.ecowitt.net/home/index?id=20166)
-*  [GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141) 
-*  [GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20243). 
+*  cst0002 [GW100A-WIFIF774](https://www.ecowitt.net/home/index?id=20163)
+*  cst0028 [GW100A-WIFI243E](https://www.ecowitt.net/home/index?id=20164)
+*  cst0050 [GW100A-WIFIFC29](https://www.ecowitt.net/home/index?id=20166)
+*  cst0051 [GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20243)
+*  cst0076 [GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141) 
+
 
 In additon two minutes raw live data is available at the [sensingbiodiversity](http://137.248.191.215:1527/) server.
 
-**Note**: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next week. At this stage, the data have not been checked or validated in any way.
+**Note**: The calibration phase was completed on July 12 (2020). At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
 ## Map of 3D Climate Sensor Trees
 
