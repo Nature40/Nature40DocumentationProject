@@ -101,16 +101,11 @@ More data is available by clicking on the station.
 [Full-screen version of the map]({{ site.baseurl }}/assets/misc/channelsetting_GW1000_calibration.html){:target="_blank"}
 
 
-The field calibration step is running. 
+The field calibration step is finished. 
 
 
 {% include gallery id="panel2"  caption= "*The installation of the field experiment. Overall setup (left), Detail of the gw1000-sensorbox  (middle), Passive radiation shield array (right)*" layout ="third"  %}
 
-The sensors are currently running in the Marburg Open Forest at the reference station *Grubenwiese* in a measuring campaign for calibration purposes. For a convenient overview please have a look at the ecowitt dashboard (need account). You will find 5 minutes measuements. Five minutes live data is available at the Ecowitt cloud [Station 1](https://www.ecowitt.net/home/index?id=20163), [Station 2](https://www.ecowitt.net/home/index?id=20164), [Station 3](https://www.ecowitt.net/home/index?id=20166), [Station 4](https://www.ecowitt.net/home/index?id=20141) and [Station 5](https://www.ecowitt.net/home/index?id=20243). The the high resolution two minutes raw live data is available at [sensingbiodiversity](http://137.248.191.215:1527/)
-server.
-
-**Note**: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next week. At this stage, the data have not been checked or validated in any way.
-{: .notice--danger}
 
 ## 3D Tree Sensor Deployment
 
@@ -122,7 +117,22 @@ The equipping of the selected five core study trees with three-dimensionally dis
 
 {% include gallery_collection gallery_path = "images/climate/cst0002" caption = "First setup of temperature/humidity sensors at the cst_00002" %}
 
+## 3D Climate Data
+
+The sensors are currently running in the Marburg Open Forest at the core study trees that are shown on the underneath map. For a convenient overview please have a look at the ecowitt dashboard (need account). You will find 2 minutes measurements. Two minutes live data is available at the Ecowitt cloud:
+*  [GW100A-WIFIF774](https://www.ecowitt.net/home/index?id=20163)
+*  [GW100A-WIFI243E](https://www.ecowitt.net/home/index?id=20164)
+*  [GW100A-WIFIFC29](https://www.ecowitt.net/home/index?id=20166)
+*  [GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141) 
+*  [GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20243). 
+
+In additon two minutes raw live data is available at the [sensingbiodiversity](http://137.248.191.215:1527/) server.
+
+**Note**: The calibration phase was completed on July 12 (2020). The stations will be transferred to the Core Study Trees within the next week. At this stage, the data have not been checked or validated in any way.
+{: .notice--danger}
 ## Map of 3D Climate Sensor Trees
 
 {% include media url="/assets/misc/sensorboxes5_deployment_ele_3d.html" %}
 [Full-screen version of the map]({{ site.baseurl }}/assets/misc/sensorboxes5_deployment_ele_3d.html){:target="_blank"}
+
+
