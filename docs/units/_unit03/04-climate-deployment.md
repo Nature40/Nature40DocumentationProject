@@ -114,7 +114,7 @@ server.
 
 ## 3D Tree Sensor Deployment
 
-The equipping of the selected five core study trees with three-dimensionally distributed climate sensors is entering the final phase and can be completed in the coming days. The holders of *cst_00071* are extended to roughly 60 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
+The equipping of the selected five core study trees with three-dimensionally distributed climate sensors is finished. The holders of *cst_00071* will be extended soon to roughly 60 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
 
 {% include gallery_collection gallery_path = "images/climate/cst0076" caption = "First setup of temperature/humidity sensors at the cst_00076" %}
 
