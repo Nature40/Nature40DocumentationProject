@@ -68,7 +68,13 @@ Currently 5 WiFi Hubs with 8 sensors and one base station each are connected  vi
 * Power supply:  Outdoor unit: 2 x 1.5V batteries The primary energy source is the solar panel. The batteries provide backup power when solar energy is limited.
 
 
-## Channel Assignment and and Station Coding
+
+## Calibration Concept
+
+The low budget Sensors are usually lacking of a stable measurement quality. To obtain reliable micro climate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identify sensor which produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
+For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
+
+### Channel Assignment and and Station Coding
 
 |HubId          |WeatherStationId                |BaseID|CH01|CH02|CH03|CH04|CH05|CH06|CH07|CH08|
 |---------------|--------------------------------|------|----|----|----|----|----|----|----|----|
@@ -78,10 +84,6 @@ Currently 5 WiFi Hubs with 8 sensors and one base station each are connected  vi
 |GW100A-WIFIFB27|C90B7356EFDA99C5 584B057DA2363EDB|3e    |3b  |b8  |e2  |4d  |89  |d2  |c3  |d3  |
 |GW100A-WIFIFC29|CC354E3266838432 3E5CB75B8D4A4722|7c    |f   |b8  |92  |9c  |c   |57  |53  |9d  |
 
-## Calibration Concept
-
-The low budget Sensors are usually lacking of a stable measurement quality. To obtain reliable micro climate data a three step calibration process is implemented. In a first step the measurements of all sensors will be statistically analysed to identify sensor which produce outliers. In a second step the sensors will be calibrated in controlled climate settings (-15!C , 15°C and 45°C). Finally the sensors are calibrated against an operational running high price reference station in the field. 
-For the future a machine learning approach including the radiation, azimuth, temperature and humidity as predictors for the calibrated temperature as the response variable will be used as an rolling calibration tool. 
 
 ### Pre-Calibration
 
