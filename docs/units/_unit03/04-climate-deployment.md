@@ -134,7 +134,7 @@ The equipping of the selected five core study trees with three-dimensionally dis
 
 
 
-## 3D Climate Data
+### 3D Climate Data
 
 The sensors are running in the Marburg Open Forest. The core study trees that are shown on the underneath map. For a convenient overview please have a look at the ecowitt dashboard (need account). For the following core study trees (cst see also map below) you will find live data in a two minutes resolution:
 
@@ -149,7 +149,8 @@ In additon the raw data stream is available via the [sensingbiodiversity](http:/
 
 **Note**: The calibration phase was completed on July 12 (2020). At this stage, the data have not been checked or validated in any way.
 {: .notice--danger}
-## Map of 3D Climate Sensor Trees
+
+### Map of 3D Climate Sensor Trees
 
 {% include media url="/assets/misc/sensorboxes5_deployment_ele_3d.html" %}
 [Full-screen version of the map]({{ site.baseurl }}/assets/misc/sensorboxes5_deployment_ele_3d.html){:target="_blank"}
