@@ -109,23 +109,38 @@ The field calibration step is finished.
 
 ## 3D Tree Sensor Deployment
 
-The equipping of the selected five core study trees with three-dimensionally distributed climate sensors is finished. The holders of *cst_00071* will be extended soon to roughly 60 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. 
+The equipping of the selected five core study trees with three-dimensionally distributed climate sensors is finished. 
 
-{% include gallery_collection gallery_path = "images/climate/cst0076" caption = "First setup of temperature/humidity sensors at the cst_00076" %}
+{% include gallery_collection gallery_path = "images/climate/cst0076" caption = "Some temperature/humidity sensors on cst_00076. The holders of *cst_00071* will be extended soon to roughly 60 cm in order to measure the temperature and humidity inside the tree crown instead of the immediate stem climate. " %}
 
-{% include gallery_collection gallery_path = "images/climate/cst0051" caption = "First setup of temperature/humidity sensors at the cst_00051" %}
+{% include gallery_collection gallery_path = "images/climate/cst0028" caption = " Some temperature/humidity sensors on cst_00028" %}
 
-{% include gallery_collection gallery_path = "images/climate/cst0002" caption = "First setup of temperature/humidity sensors at the cst_00002" %}
+{% include gallery_collection gallery_path = "images/climate/cst0051" caption = "Some temperature/humidity sensors on cst_00051" %}
+
+{% include gallery_collection gallery_path = "images/climate/cst0050" caption = "Some temperature/humidity sensors on  cst_00050" %}
+
+
+{% include gallery_collection gallery_path = "images/climate/cst0002" caption = "Some temperature/humidity sensors on cst_00002" %}
+
+
+
+
+
+
+
+
+
+
 
 ## 3D Climate Data
 
-The sensors are running in the Marburg Open Forest. The core study trees that are shown on the underneath map. For a convenient overview please have a look at the ecowitt dashboard (need account). You will find 2 minutes live data:
+The sensors are running in the Marburg Open Forest. The core study trees that are shown on the underneath map. For a convenient overview please have a look at the ecowitt dashboard (need account). For the following core study trees (cst see also map below) you will find live data in a two minutes resolution:
 
-*  cst0002 [GW100A-WIFIF774](https://www.ecowitt.net/home/index?id=20163)
-*  cst0028 [GW100A-WIFI243E](https://www.ecowitt.net/home/index?id=20164)
-*  cst0050 [GW100A-WIFIFC29](https://www.ecowitt.net/home/index?id=20166)
-*  cst0051 [GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20243)
-*  cst0076 [GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141) 
+*  cst_0002 [GW100A-WIFIF774](https://www.ecowitt.net/home/index?id=20163)
+*  cst_0028 [GW100A-WIFI243E](https://www.ecowitt.net/home/index?id=20164)
+*  cst_0050 [GW100A-WIFIFC29](https://www.ecowitt.net/home/index?id=20166)
+*  cst_0051 [GW100A-WIFIFB27](https://www.ecowitt.net/home/index?id=20243)
+*  cst_0076 [GW100A-WIFIF824](https://www.ecowitt.net/home/index?id=20141) 
 
 
 In additon the raw data stream is available via the [sensingbiodiversity](http://137.248.191.215:1527/) server.
