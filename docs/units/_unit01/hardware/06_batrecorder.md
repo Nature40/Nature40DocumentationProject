@@ -7,23 +7,32 @@ header:
   image_description: "Image Panel Natur 4.0 Sensorboxes"
   caption: "Images Natur4.0 / CC0"
 ---
-### BatRack in a nutshell 
 
-![Photograph of a BatRack running a recording at night.](../../assets/images/bat_recorder/batrack-city.jpg)
+# BatRack in a nutshell 
 
-#### Examples:
+![Photograph of a BatRack running a recording at night.](../../assets/images/bat_recorder//batrack-city.jpg)
+
+### Examples:
 
 BatRack can capture videos like the following in an automatic and sensor triggered way.
 
 <figure class="video_container">
-  <video controls="true" allowfullscreen="true">
+  <video controls="true" allowfullscreen="true" width="100%">
     <source src="../../assets/videos/schwaermende_mbecs.mp4" type="video/mp4">
   </video>
 </figure>
 
 An example spectrogram of bat calls recorded by BatRack. (It was post-processed by audacity by hand with moise filter, highpass and lowpass filter)
 
-![Spectrogram of a batcall recorded by BatRack](../../assets/images/bat_recorder/bat_calls.jpeg)
+![Spectrogram of a batcall recorded by BatRack](../../assets/images/bat_recorder//bat_calls.jpeg)
+
+The following video shows the match between the incoming vhf signals and the recorded video.
+
+<figure class="video_container"> 
+  <video controls="true" allowfullscreen="true" width="100%">
+    <source src="../../assets/videos/vhf_video_match.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Parts list
 
@@ -68,17 +77,46 @@ To rebuild BatRack in the hole setup you have to buy the following parts.
 |                           |       |                |                |                 |
 | Total                     |       |                |                |      1.923,10 € |
 
-With all parts you can build BatRack by following the instructions of the following steps:
+### A very short instruction of building a BatRack prototype
 
-Step 1:
+A longer and final version will be added shortly. At the moment not all final feature are presented by the pictures. 
+But you cam get an impression of the building process of BatRack and the deployment in the field. 
 
-Step 2:
+#### Step 1:
 
-Step 3:
+Add the basic components to the main BatRack case and apply the first wires. 
 
-Step 4:
+![BatRack with basic wiring](../../assets/images/bat_recorder/batrack-basic-wiring.jpeg)
+
+#### Step 2:
+
+Add the additional wires as shown in the picture and mount microphone and camera.
+
+![BatRack with all wires](../../assets/images/bat_recorder/batrack-more-wiring.jpeg)
+
+#### Step 3:
+
+Now BatRack should look like the following. In this image the Neutrik HDMI feedthrought solution is not installed. 
+In case of nice weather you can also go in the field with a prototype build like that. 
+
+![How BatRack looks on the outside](../../assets/images/bat_recorder/batrack-outside-look.jpeg)
+
+#### Step 4:
+
+The last step is inserting a sd card with an flashed image from [BatRack image page](https://github.com/Nature40/Sensorboxes-Images/releases/tag/batrack-0.1) and deploy BatRack in the field.
+
+![BatRack deployed in the wild](../../assets/images/bat_recorder/batrack-deployment.jpeg)
+
+You can also watch the live video stream over wifi from any mobile end device.
+
+![Live view over wifi from the BatRack video stream](../../assets/images/bat_recorder/batrack-liveview.jpeg)
+
+![Night view over wifi from the BatRack video stream](../../assets/images/bat_recorder/batrack-night-view.jpeg)
 
 ## Flowchart
+
+The Audio analysis unit and the video analysis unit are a bit tricky to understand and some config options are use to fit the behaviour of BatRack your needs. 
+So in the following flowchart you can see the main concept of both units and the interaction with the config. 
 
 ![Flowchart of audio and video unit](../../assets/images/bat_recorder/flowchart.pdf)
 
